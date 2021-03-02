@@ -38,171 +38,171 @@
      when: ApiGatewayPortalDEV_service.exists
 
 ### AuthenticationService
-   - name: get info on service 'AuthenticationService{{ Environment }}'
+   - name: get info on service AuthenticationServiceDEV
      win_service:
-       name: 'AuthenticationService{{ Environment }}'
-     register: 'AuthenticationService{{ Environment }}_service' 
-   - name: Stop 'AuthenticationService{{ Environment }}'
+       name: AuthenticationServiceDEV
+     register: AuthenticationServiceDEV_service
+   - name: Stop AuthenticationServiceDEV
      win_service:
-       name: 'AuthenticationService{{ Environment }}'
+       name: AuthenticationServiceDEV
        state: stopped
-     when: 'AuthenticationService{{ Environment }}_service.exists'
+     when: AuthenticationServiceDEV_service.exists
      
 ### AutorizadorGenerico
-   - name: get info on service 'AuthenticationService{{ Environment }}'
+   - name: get info on service AutorizadorGenericoDEV
      win_service:
-       name: 'AuthenticationService{{ Environment }}'
-     register: 'AuthenticationService{{ Environment }}_service' 
-   - name: Stop 'AutorizadorGenerico{{ Environment }}'
+       name: AutorizadorGenericoDEV
+     register: AutorizadorGenericoDEV_service
+   - name: Stop AutorizadorGenericoDEV
      win_service:
-       name: 'AutorizadorGenerico{{ Environment }}'
+       name: AutorizadorGenericoDEV
        state: stopped
-     when: 'AutorizadorGenerico{{ Environment }}_service.exists'
+     when: AutorizadorGenericoDEV_service.exists
 
 ### SanatorioAllendeBackEnd
-   - name: get info on service 'SanatorioAllendeBackEnd{{ Environment }}'
+   - name: get info on service SanatorioAllendeBackEndENV
      win_service:
-       name: 'SanatorioAllendeBackEnd{{ Environment }}'
-     register: 'SanatorioAllendeBackEnd{{ Environment }}_service'
-   - name: Stop 'SanatorioAllendeBackEnd{{ Environment }}'
+       name: SanatorioAllendeBackEndENV
+     register: SanatorioAllendeBackEndENV_service
+   - name: Stop SanatorioAllendeBackEndENV
      win_service:
-       name: 'SanatorioAllendeBackEnd{{ Environment }}'
+       name: SanatorioAllendeBackEndENV
        state: stopped
-     when: 'SanatorioAllendeBackEnd{{ Environment }}_service.exists'
+     when: SanatorioAllendeBackEndENV_service.exists
 
 ### SanatorioAllendeBackEndPortal
-   - name: get info on service 'SanatorioAllendeBackEndPortal{{ Environment }}'
+   - name: get info on service SanatorioAllendeBackEndPortalDEV
      win_service:
-       name: 'SanatorioAllendeBackEndPortal{{ Environment }}'
-     register: 'SanatorioAllendeBackEndPortal{{ Environment }}_service'
-   - name: Stop 'SanatorioAllendeBackEndPortal{{ Environment }}'
+       name: SanatorioAllendeBackEndPortalDEV
+     register: SanatorioAllendeBackEndPortalDEV_service
+   - name: Stop SanatorioAllendeBackEndPortalDEV
      win_service:
-       name: 'SanatorioAllendeBackEndPortal{{ Environment }}'
+       name: SanatorioAllendeBackEndPortalDEV
        state: stopped
-     when: 'SanatorioAllendeBackEndPortal{{ Environment }}_service.exists'
+     when: SanatorioAllendeBackEndPortalDEV_service.exists
 
 ### Terminologia
-   - name: get info on service 'Terminologia{{ Environment }}'
+   - name: get info on service TerminologiaDEV
      win_service:
-       name: 'Terminologia{{ Environment }}'
-     register: 'Terminologia{{ Environment }}_service'
-   - name: Stop 'Terminologia{{ Environment }}'
+       name: TerminologiaDEV
+     register: TerminologiaDEV_service
+   - name: Stop TerminologiaDEV
      win_service:
-       name: 'Terminologia{{ Environment }}'
+       name: TerminologiaDEV
        state: stopped
-     when: 'Terminologia{{ Environment }}_service.exists'
+     when: TerminologiaDEV_service.exists
 
 
 ### Stop Services workers
 ### BackupIMService
-   - name: get info on service 'BackupIMService{{ Environment }}'
+   - name: get info on service BackupIMServiceDEV
      win_service:
-       name: 'BackupIMService{{ Environment }}'
-     register: 'BackupIMService{{ Environment }}_service'
-   - name: Stop 'BackupIMService{{ Environment }}'
+       name: BackupIMServiceDEV
+     register: BackupIMServiceDEV_service
+   - name: Stop BackupIMServiceDEV
      win_service:
-       name: 'BackupIMService{{ Environment }}'
+       name: BackupIMServiceDEV
        state: stopped
-     when: 'BackupIMService{{ Environment }}_service.exists'
+     when: BackupIMServiceDEV_service.exists
 
 ### CacheTerminologia
-   - name: get info on service 'CacheTerminologia{{ Environment }}'
+   - name: get info on service CacheTerminologiaDEV
      win_service:
-       name: 'CacheTerminologia{{ Environment }}'
-     register: 'CacheTerminologia{{ Environment }}_service'
-   - name: Stop 'CacheTerminologia{{ Environment }}'
+       name: CacheTerminologiaDEV
+     register: CacheTerminologiaDEV_service
+   - name: Stop CacheTerminologiaDEV
      win_service:
-       name: 'CacheTerminologia{{ Environment }}'
+       name: CacheTerminologiaDEV
        state: stopped
-     when: 'CacheTerminologia{{ Environment }}_service.exists'
+     when: CacheTerminologiaDEV_service.exists
 
 ### ConfirmacionDeTurnosService
-   - name: get info on service 'ConfirmacionDeTurnosService{{ Environment }}'
+   - name: get info on service ConfirmacionDeTurnosServiceDEV
      win_service:
-       name: 'ConfirmacionDeTurnosService{{ Environment }}'
-     register: 'ConfirmacionDeTurnosService{{ Environment }}_service'
-   - name: Stop 'ConfirmacionDeTurnosService{{ Environment }}'
+       name: ConfirmacionDeTurnosServiceDEV
+     register: ConfirmacionDeTurnosServiceDEV_service
+   - name: Stop ConfirmacionDeTurnosServiceDEV
      win_service:
-       name: 'ConfirmacionDeTurnosService{{ Environment }}'
+       name: ConfirmacionDeTurnosServiceDEV
        state: stopped
-     when: 'ConfirmacionDeTurnosService{{ Environment }}_service.exists'  
+     when: ConfirmacionDeTurnosServiceDEV_service.exists
 
 ### FacturaElectronicaService
-   - name: get info on service 'FacturaElectronicaService{{ Environment }}'
+   - name: get info on service FacturaElectronicaServiceDEV
      win_service:
-       name: 'FacturaElectronicaService{{ Environment }}'
-     register: 'FacturaElectronicaService{{ Environment }}_service'
-   - name: Stop 'FacturaElectronicaService{{ Environment }}'
+       name: FacturaElectronicaServiceDEV
+     register: FacturaElectronicaServiceDEV_service
+   - name: Stop FacturaElectronicaServiceDEV
      win_service:
-       name: 'FacturaElectronicaService{{ Environment }}'
+       name: FacturaElectronicaServiceDEV
        state: stopped
-     when: 'FacturaElectronicaService{{ Environment }}_service.exists'
+     when: FacturaElectronicaServiceDEV_service.exists
 
 ### ImportadorDeFarmacosService
-   - name: get info on service 'ImportadorDeFarmacosService{{ Environment }}'
+   - name: get info on service ImportadorDeFarmacosServiceDEV
      win_service:
-       name: 'ImportadorDeFarmacosService{{ Environment }}'
-     register: 'ImportadorDeFarmacosService{{ Environment }}_service'
-   - name: Stop 'ImportadorDeFarmacosService{{ Environment }}'
+       name: ImportadorDeFarmacosServiceDEV
+     register: ImportadorDeFarmacosServiceDEV_service
+   - name: Stop ImportadorDeFarmacosServiceDEV
      win_service:
-       name: 'ImportadorDeFarmacosService{{ Environment }}'
+       name: ImportadorDeFarmacosServiceDEV
        state: stopped
-     when: 'ImportadorDeFarmacosService{{ Environment }}_service.exists'
+     when: ImportadorDeFarmacosServiceDEV_service.exists
 
 ### MessageIntegrationService
-   - name: get info on service 'MessageIntegrationService{{ Environment }}'
+   - name: get info on service MessageIntegrationServiceDEV
      win_service:
-       name: 'MessageIntegrationService{{ Environment }}'
-     register: 'MessageIntegrationService{{ Environment }}_service'
-   - name: Stop 'MessageIntegrationService{{ Environment }}'
+       name: MessageIntegrationServiceDEV
+     register: MessageIntegrationServiceDEV_service
+   - name: Stop MessageIntegrationServiceDEV
      win_service:
-       name: 'MessageIntegrationService{{ Environment }}'
+       name: MessageIntegrationServiceDEV
        state: stopped
-     when: 'MessageIntegrationService{{ Environment }}_service.exists'
+     when: MessageIntegrationServiceDEV_service.exists
 
 ### NotificacionDeSolicitudesPendientes
-   - name: get info on service 'NotificacionDeSolicitudesPendientes{{ Environment }}'
+   - name: get info on service NotificacionDeSolicitudesPendientesDEV
      win_service:
-       name: 'NotificacionDeSolicitudesPendientes{{ Environment }}'
-     register: 'NotificacionDeSolicitudesPendientes{{ Environment }}_service'
-   - name: Stop 'NotificacionDeSolicitudesPendientes{{ Environment }}'
+       name: NotificacionDeSolicitudesPendientesDEV
+     register: NotificacionDeSolicitudesPendientesDEV_service
+   - name: Stop NotificacionDeSolicitudesPendientesDEV
      win_service:
-       name: 'NotificacionDeSolicitudesPendientes{{ Environment }}'
+       name: NotificacionDeSolicitudesPendientesDEV
        state: stopped
-     when: 'NotificacionDeSolicitudesPendientes{{ Environment }}_service.exists'
+     when: NotificacionDeSolicitudesPendientesDEV_service.exists
 
 ### ReprocesadorDeIntegraciones
-   - name: get info on service 'ReprocesadorDeIntegraciones{{ Environment }}'
+   - name: get info on service ReprocesadorDeIntegracionesDEV
      win_service:
-       name: 'ReprocesadorDeIntegraciones{{ Environment }}'
-     register: 'ReprocesadorDeIntegraciones{{ Environment }}_service'
-   - name: Stop 'ReprocesadorDeIntegraciones{{ Environment }}'
+       name: ReprocesadorDeIntegracionesDEV
+     register: ReprocesadorDeIntegracionesDEV_service
+   - name: Stop ReprocesadorDeIntegracionesDEV
      win_service:
-       name: 'ReprocesadorDeIntegraciones{{ Environment }}'
+       name: ReprocesadorDeIntegracionesDEV
        state: stopped
-     when: 'ReprocesadorDeIntegraciones{{ Environment }}_service.exists'
+     when: ReprocesadorDeIntegracionesDEV_service.exists
 
 ### ReprocesoAutorizacionesPendientesAud
-   - name: get info on service 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
+   - name: get info on service ReprocesoAutorizacionesPendientesAudDEV
      win_service:
-       name: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
-     register: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}_service'
-   - name: Stop 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
+       name: ReprocesoAutorizacionesPendientesAudDEV
+     register: ReprocesoAutorizacionesPendientesAudDEV_service
+   - name: Stop ReprocesoAutorizacionesPendientesAudDEV
      win_service:
-       name: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
+       name: ReprocesoAutorizacionesPendientesAudDEV
        state: stopped
-     when: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}_service.exists'
+     when: ReprocesoAutorizacionesPendientesAudDEV_service.exists
 
 ### RisIntegrationService
-   - name: get info on service 'RisIntegrationService{{ Environment }}'
+   - name: get info on service RisIntegrationServiceDEV
      win_service:
-       name: 'RisIntegrationService{{ Environment }}'
-     register: 'RisIntegrationService{{ Environment }}_service'
-   - name: Stop 'RisIntegrationService{{ Environment }}'
+       name: RisIntegrationServiceDEV
+     register: RisIntegrationServiceDEV_service
+   - name: Stop RisIntegrationServiceDEV
      win_service:
-       name: 'RisIntegrationService{{ Environment }}'
+       name: RisIntegrationServiceDEV
        state: stopped
-     when: 'RisIntegrationService{{ Environment }}_service.exists'
+     when: RisIntegrationServiceDEV_service.exists
 
 
 ### Elimino Carpetas de Servicios
@@ -300,193 +300,193 @@
 ### Starteo Servicios Backend
 ### Start Services webapi
 ### ApiGateway
-   - name: get info on service 'ApiGateway{{ Environment }}'
+   - name: get info on service ApiGatewayDEV
      win_service:
-       name: 'ApiGateway{{ Environment }}'
-     register: 'ApiGateway{{ Environment }}_service'  
-   - name: Start 'ApiGateway{{ Environment }}'
+       name: ApiGatewayDEV
+     register: ApiGatewayDEV_service 
+   - name: Start ApiGatewayDEV
      win_service:
-       name: 'ApiGateway{{ Environment }}'
+       name: ApiGatewayDEV
        state: started
-     when: 'ApiGateway{{ Environment }}_service.exists'
+     when: ApiGatewayDEV_service.exists
 
 ### ApiGatewayPortal
-   - name: get info on service 'ApiGatewayPortal{{ Environment }}'
+   - name: get info on service ApiGatewayPortalDEV
      win_service:
-       name: 'ApiGatewayPortal{{ Environment }}'
-     register: 'ApiGatewayPortal{{ Environment }}_service' 
-   - name: Start 'ApiGatewayPortal{{ Environment }}'
+       name: ApiGatewayPortalDEV
+     register: ApiGatewayPortalDEV_service 
+   - name: Start ApiGatewayPortalDEV
      win_service:
-       name: 'ApiGatewayPortal{{ Environment }}'
+       name: ApiGatewayPortalDEV
        state: started
-     when: 'ApiGatewayPortal{{ Environment }}_service.exists'
+     when: ApiGatewayPortalDEV_service.exists
 
 ### AuthenticationService
-   - name: get info on service 'AuthenticationService{{ Environment }}'
+   - name: get info on service AuthenticationServiceDEV
      win_service:
-       name: 'AuthenticationService{{ Environment }}'
-     register: 'AuthenticationService{{ Environment }}_service' 
-   - name: Start 'AuthenticationService{{ Environment }}'
+       name: AuthenticationServiceDEV
+     register: AuthenticationServiceDEV_service
+   - name: Start AuthenticationServiceDEV
      win_service:
-       name: 'AuthenticationService{{ Environment }}'
+       name: AuthenticationServiceDEV
        state: started
-     when: 'AuthenticationService{{ Environment }}_service.exists'
+     when: AuthenticationServiceDEV_service.exists
      
 ### AutorizadorGenerico
-   - name: get info on service 'AuthenticationService{{ Environment }}'
+   - name: get info on service AuthenticationServiceDEV
      win_service:
-       name: 'AuthenticationService{{ Environment }}'
-     register: 'AuthenticationService{{ Environment }}_service' 
-   - name: Start 'AutorizadorGenerico{{ Environment }}'
+       name: AuthenticationServiceDEV
+     register: AuthenticationServiceDEV_service 
+   - name: Start AuthenticationServiceDEV
      win_service:
-       name: 'AutorizadorGenerico{{ Environment }}'
+       name: AuthenticationServiceDEV
        state: started
-     when: 'AutorizadorGenerico{{ Environment }}_service.exists'
+     when: AuthenticationServiceDEV_service.exists
 
 ### SanatorioAllendeBackEnd
-   - name: get info on service 'SanatorioAllendeBackEnd{{ Environment }}'
+   - name: get info on service SanatorioAllendeBackEndDEV
      win_service:
-       name: 'SanatorioAllendeBackEnd{{ Environment }}'
-     register: 'SanatorioAllendeBackEnd{{ Environment }}_service'
-   - name: Start 'SanatorioAllendeBackEnd{{ Environment }}'
+       name: SanatorioAllendeBackEndDEV
+     register: SanatorioAllendeBackEndDEV_service
+   - name: Start SanatorioAllendeBackEndDEV
      win_service:
-       name: 'SanatorioAllendeBackEnd{{ Environment }}'
+       name: SanatorioAllendeBackEndDEV
        state: started
-     when: 'SanatorioAllendeBackEnd{{ Environment }}_service.exists'
+     when: SanatorioAllendeBackEndDEV_service.exists
 
 ### SanatorioAllendeBackEndPortal
-   - name: get info on service 'SanatorioAllendeBackEndPortal{{ Environment }}'
+   - name: get info on service SanatorioAllendeBackEndPortalDEV
      win_service:
-       name: 'SanatorioAllendeBackEndPortal{{ Environment }}'
-     register: 'SanatorioAllendeBackEndPortal{{ Environment }}_service'
-   - name: Start 'SanatorioAllendeBackEndPortal{{ Environment }}'
+       name: SanatorioAllendeBackEndPortalDEV
+     register: SanatorioAllendeBackEndPortalDEV_service
+   - name: Start SanatorioAllendeBackEndPortalDEV
      win_service:
-       name: 'SanatorioAllendeBackEndPortal{{ Environment }}'
+       name: SanatorioAllendeBackEndPortalDEV
        state: started
-     when: 'SanatorioAllendeBackEndPortal{{ Environment }}_service.exists'
+     when: SanatorioAllendeBackEndPortalDEV_service.exists
 
 ### Terminologia
-   - name: get info on service 'Terminologia{{ Environment }}'
+   - name: get info on service TerminologiaDEV
      win_service:
-       name: 'Terminologia{{ Environment }}'
-     register: 'Terminologia{{ Environment }}_service'
-   - name: Start 'Terminologia{{ Environment }}'
+       name: TerminologiaDEV
+     register: TerminologiaDEV_service
+   - name: Start TerminologiaDEV
      win_service:
-       name: 'Terminologia{{ Environment }}'
+       name: TerminologiaDEV
        state: started
-     when: 'Terminologia{{ Environment }}_service.exists'
+     when: TerminologiaDEV_service.exists
 
 
 ### Stop Services workers
 ### BackupIMService
-   - name: get info on service 'BackupIMService{{ Environment }}'
+   - name: get info on service BackupIMServiceDEV
      win_service:
-       name: 'BackupIMService{{ Environment }}'
-     register: 'BackupIMService{{ Environment }}_service'
-   - name: Start 'BackupIMService{{ Environment }}'
+       name: BackupIMServiceDEV
+     register: BackupIMServiceDEV_service
+   - name: Start BackupIMServiceDEV
      win_service:
-       name: 'BackupIMService{{ Environment }}'
+       name: BackupIMServiceDEV
        state: started
-     when: 'BackupIMService{{ Environment }}_service.exists'
+     when: BackupIMServiceDEV_service.exists
 
 ### CacheTerminologia
-   - name: get info on service 'CacheTerminologia{{ Environment }}'
+   - name: get info on service CacheTerminologiaDEV
      win_service:
-       name: 'CacheTerminologia{{ Environment }}'
-     register: 'CacheTerminologia{{ Environment }}_service'
-   - name: Start 'CacheTerminologia{{ Environment }}'
+       name: CacheTerminologiaDEV
+     register: CacheTerminologiaDEV_service
+   - name: Start CacheTerminologiaDEV
      win_service:
-       name: 'CacheTerminologia{{ Environment }}'
+       name: CacheTerminologiaDEV
        state: started
-     when: 'CacheTerminologia{{ Environment }}_service.exists'
+     when: CacheTerminologiaDEV_service.exists
 
 ### ConfirmacionDeTurnosService
-   - name: get info on service 'ConfirmacionDeTurnosService{{ Environment }}'
+   - name: get info on service ConfirmacionDeTurnosServiceDEV
      win_service:
-       name: 'ConfirmacionDeTurnosService{{ Environment }}'
-     register: 'ConfirmacionDeTurnosService{{ Environment }}_service'
-   - name: Start 'ConfirmacionDeTurnosService{{ Environment }}'
+       name: ConfirmacionDeTurnosServiceDEV
+     register: ConfirmacionDeTurnosServiceDEV_service
+   - name: Start ConfirmacionDeTurnosServiceDEV
      win_service:
-       name: 'ConfirmacionDeTurnosService{{ Environment }}'
+       name: ConfirmacionDeTurnosServiceDEV
        state: started
-     when: 'ConfirmacionDeTurnosService{{ Environment }}_service.exists'  
+     when: ConfirmacionDeTurnosServiceDEV_service.exists
 
 ### FacturaElectronicaService
-   - name: get info on service 'FacturaElectronicaService{{ Environment }}'
+   - name: get info on service FacturaElectronicaServiceDEV
      win_service:
-       name: 'FacturaElectronicaService{{ Environment }}'
-     register: 'FacturaElectronicaService{{ Environment }}_service'
-   - name: Start 'FacturaElectronicaService{{ Environment }}'
+       name: FacturaElectronicaServiceDEV
+     register: FacturaElectronicaServiceDEV_service
+   - name: Start FacturaElectronicaServiceDEV
      win_service:
-       name: 'FacturaElectronicaService{{ Environment }}'
+       name: FacturaElectronicaServiceDEV
        state: started
-     when: 'FacturaElectronicaService{{ Environment }}_service.exists'
+     when: FacturaElectronicaServiceDEV_service.exists
 
 ### ImportadorDeFarmacosService
-   - name: get info on service 'ImportadorDeFarmacosService{{ Environment }}'
+   - name: get info on service ImportadorDeFarmacosServiceDEV
      win_service:
-       name: 'ImportadorDeFarmacosService{{ Environment }}'
-     register: 'ImportadorDeFarmacosService{{ Environment }}_service'
-   - name: Start 'ImportadorDeFarmacosService{{ Environment }}'
+       name: ImportadorDeFarmacosServiceDEV
+     register: ImportadorDeFarmacosServiceDEV_service
+   - name: Start ImportadorDeFarmacosServiceDEV
      win_service:
-       name: 'ImportadorDeFarmacosService{{ Environment }}'
+       name: ImportadorDeFarmacosServiceDEV
        state: started
-     when: 'ImportadorDeFarmacosService{{ Environment }}_service.exists'
+     when: ImportadorDeFarmacosServiceDEV_service.exists
 
 ### MessageIntegrationService
-   - name: get info on service 'MessageIntegrationService{{ Environment }}'
+   - name: get info on service MessageIntegrationServiceDEV
      win_service:
-       name: 'MessageIntegrationService{{ Environment }}'
-     register: 'MessageIntegrationService{{ Environment }}_service'
-   - name: Start 'MessageIntegrationService{{ Environment }}'
+       name: MessageIntegrationServiceDEV
+     register: MessageIntegrationServiceDEV_service
+   - name: Start MessageIntegrationServiceDEV
      win_service:
-       name: 'MessageIntegrationService{{ Environment }}'
+       name: MessageIntegrationServiceDEV
        state: started
-     when: 'MessageIntegrationService{{ Environment }}_service.exists'
+     when: MessageIntegrationServiceDEV_service.exists
 
 ### NotificacionDeSolicitudesPendientes
-   - name: get info on service 'NotificacionDeSolicitudesPendientes{{ Environment }}'
+   - name: get info on service NotificacionDeSolicitudesPendientesDEV
      win_service:
-       name: 'NotificacionDeSolicitudesPendientes{{ Environment }}'
-     register: 'NotificacionDeSolicitudesPendientes{{ Environment }}_service'
-   - name: Start 'NotificacionDeSolicitudesPendientes{{ Environment }}'
+       name: NotificacionDeSolicitudesPendientesDEV
+     register: NotificacionDeSolicitudesPendientesDEV_service
+   - name: Start NotificacionDeSolicitudesPendientesDEV
      win_service:
-       name: 'NotificacionDeSolicitudesPendientes{{ Environment }}'
+       name: NotificacionDeSolicitudesPendientesDEV
        state: started
-     when: 'NotificacionDeSolicitudesPendientes{{ Environment }}_service.exists'
+     when: NotificacionDeSolicitudesPendientesDEV_service.exists
 
 ### ReprocesadorDeIntegraciones
-   - name: get info on service 'ReprocesadorDeIntegraciones{{ Environment }}'
+   - name: get info on service ReprocesadorDeIntegracionesDEV
      win_service:
-       name: 'ReprocesadorDeIntegraciones{{ Environment }}'
-     register: 'ReprocesadorDeIntegraciones{{ Environment }}_service'
-   - name: Start 'ReprocesadorDeIntegraciones{{ Environment }}'
+       name: ReprocesadorDeIntegracionesDEV
+     register: ReprocesadorDeIntegracionesDEV_service
+   - name: Start ReprocesadorDeIntegracionesDEV
      win_service:
-       name: 'ReprocesadorDeIntegraciones{{ Environment }}'
+       name: ReprocesadorDeIntegracionesDEV
        state: started
-     when: 'ReprocesadorDeIntegraciones{{ Environment }}_service.exists'
+     when: ReprocesadorDeIntegracionesDEV_service.exists
 
 ### ReprocesoAutorizacionesPendientesAud
-   - name: get info on service 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
+   - name: get info on service ReprocesoAutorizacionesPendientesAudDEV
      win_service:
-       name: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
-     register: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}_service'
-   - name: Start 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
+       name: ReprocesoAutorizacionesPendientesAudDEV
+     register: ReprocesoAutorizacionesPendientesAudDEV_service
+   - name: Start ReprocesoAutorizacionesPendientesAudDEV
      win_service:
-       name: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
+       name: ReprocesoAutorizacionesPendientesAudDEV
        state: started
-     when: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}_service.exists'
+     when: ReprocesoAutorizacionesPendientesAudDEV_service.exists
 
 ### RisIntegrationService
-   - name: get info on service 'RisIntegrationService{{ Environment }}'
+   - name: get info on service RisIntegrationServiceDEV
      win_service:
-       name: 'RisIntegrationService{{ Environment }}'
-     register: 'RisIntegrationService{{ Environment }}_service'
-   - name: Start 'RisIntegrationService{{ Environment }}'
+       name: RisIntegrationServiceDEV
+     register: RisIntegrationServiceDEV_service
+   - name: Start RisIntegrationServiceDEV
      win_service:
-       name: 'RisIntegrationService{{ Environment }}'
+       name: RisIntegrationServiceDEV
        state: started
-     when: 'RisIntegrationService{{ Environment }}_service.exists'
+     when: RisIntegrationServiceDEV_service.exists
 
 ### Start Services DogWatch
 
