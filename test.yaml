@@ -1,0 +1,4 @@
+- hosts: backendev
+  tasks:
+   - name: Ping Test
+     win_ping:

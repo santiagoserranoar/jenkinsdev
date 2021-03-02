@@ -1,0 +1,19 @@
+- hosts: backendev
+  vars:
+   dirDeploy: C:\ServiciosSAInfra\SA
+   workSpace: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
+  
+  tasks:
+  - name: Delete All Folders
+    win_file:
+      path: "{{ dirDeploy }}"
+      state: absent
+  - name: Create All Folders
+    win_file:
+      path: "{{ dirDeploy }}"
+      state: directory
+
+  - name: Copy ApiGatewayPortalService
+    win_copy:
+      src: '{{ workSpace }}ApiGatewayPortalService'
+      dest: "{{ dirDeploy }}"

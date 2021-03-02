@@ -1,0 +1,293 @@
+- hosts: backendevinfra
+  vars:
+   dirDeploy: C:\ServiciosSA\DEV
+   workSpace: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
+   Environment: DEV
+
+  tasks:
+
+### Stopeo Servicios Backend
+### Stop Services DogWatch
+
+   - name: Stop 'DogWatcherService{{ Environment }}'
+     win_service:
+       name: 'DogWatcherService{{ Environment }}'
+       state: stopped
+
+### Stop Services webapi
+
+   - name: Stop 'ApiGateway{{ Environment }}'
+     win_service:
+       name: 'ApiGateway{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'ApiGatewayPortal{{ Environment }}'
+     win_service:
+       name: 'ApiGatewayPortal{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'AuthenticationService{{ Environment }}'
+     win_service:
+       name: 'AuthenticationService{{ Environment }}'
+       state: stopped
+  
+   - name: Stop 'AutorizadorGenerico{{ Environment }}'
+     win_service:
+       name: 'AutorizadorGenerico{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'SanatorioAllendeBackEnd{{ Environment }}'
+     win_service:
+       name: 'SanatorioAllendeBackEnd{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'SanatorioAllendeBackEndPortal{{ Environment }}'
+     win_service:
+       name: 'SanatorioAllendeBackEndPortal{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'Terminologia{{ Environment }}'
+     win_service:
+       name: 'Terminologia{{ Environment }}'
+       state: stopped
+
+### Stop Services workers
+
+   - name: Stop 'BackupIMService{{ Environment }}'
+     win_service:
+       name: 'BackupIMService{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'CacheTerminologia{{ Environment }}'
+     win_service:
+       name: 'CacheTerminologia{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'ConfirmacionDeTurnosService{{ Environment }}'
+     win_service:
+       name: 'ConfirmacionDeTurnosService{{ Environment }}'
+       state: stopped
+  
+   - name: Stop 'FacturaElectronicaService{{ Environment }}'
+     win_service:
+       name: 'FacturaElectronicaService{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'ImportadorDeFarmacosService{{ Environment }}'
+     win_service:
+       name: 'ImportadorDeFarmacosService{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'MessageIntegrationService{{ Environment }}'
+     win_service:
+       name: 'MessageIntegrationService{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'NotificacionDeSolicitudesPendientes{{ Environment }}'
+     win_service:
+       name: 'NotificacionDeSolicitudesPendientes{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'ReprocesadorDeIntegraciones{{ Environment }}'
+     win_service:
+       name: 'ReprocesadorDeIntegraciones{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
+     win_service:
+       name: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
+       state: stopped
+
+   - name: Stop 'RisIntegrationService{{ Environment }}'
+     win_service:
+       name: 'RisIntegrationService{{ Environment }}'
+       state: stopped
+
+### Elimino Carpetas de Servicios
+
+   - name: Delete All Folders
+     win_file:
+       path: "{{ dirDeploy }}"
+       state: absent
+   - name: Create All Folders
+     win_file:
+       path: "{{ dirDeploy }}"
+       state: directory
+
+### Copio Carpetas de nuevo Deploy
+
+   - name: Copy ApiGatewayPortalService
+     win_copy:
+       src: '{{ workSpace }}ApiGatewayPortalService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy ApiGatewayService
+     win_copy:
+       src: '{{ workSpace }}ApiGatewayService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy AuthenticationService
+     win_copy:
+       src: '{{ workSpace }}AuthenticationService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy BackendService
+     win_copy:
+       src: '{{ workSpace }}BackendService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy BackupIMService
+     win_copy:
+       src: '{{ workSpace }}BackupIMService'
+       dest: "{{ dirDeploy }}"
+  
+   - name: Copy CacheTerminologiaService
+     win_copy:
+       src: '{{ workSpace }}CacheTerminologiaService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy ConfirmacionDeTurnosService
+     win_copy:
+       src: '{{ workSpace }}ConfirmacionDeTurnosService'
+       dest: "{{ dirDeploy }}"
+  
+   - name: Copy FacturaElectronicaService
+     win_copy:
+       src: '{{ workSpace }}FacturaElectronicaService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy ImportadorDeFarmacosService
+     win_copy:
+       src: '{{ workSpace }}ImportadorDeFarmacosService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy MessageIntegrationService
+     win_copy:
+       src: '{{ workSpace }}MessageIntegrationService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy NotificacionDeSolicitudesPendientesService
+     win_copy:
+       src: '{{ workSpace }}NotificacionDeSolicitudesPendientesService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy PortalService
+     win_copy:
+       src: '{{ workSpace }}PortalService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy ReprocesadorDeIntegraciones
+     win_copy:
+       src: '{{ workSpace }}ReprocesadorDeIntegraciones'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy ReprocesoAutorizacionesPendientesAud
+     win_copy:
+       src: '{{ workSpace }}ReprocesoAutorizacionesPendientesAud'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy RisIntegrationService
+     win_copy:
+       src: '{{ workSpace }}RisIntegrationService'
+       dest: "{{ dirDeploy }}"
+
+   - name: Copy TerminologiaService
+     win_copy:
+       src: '{{ workSpace }}TerminologiaService'
+       dest: "{{ dirDeploy }}"
+
+### Start Services webapi
+
+   - name: Start 'ApiGateway{{ Environment }}'
+     win_service:
+       name: 'ApiGateway{{ Environment }}'
+       state: started
+
+   - name: Start 'ApiGatewayPortal{{ Environment }}'
+     win_service:
+       name: 'ApiGatewayPortal{{ Environment }}'
+       state: started
+
+   - name: Start 'AuthenticationService{{ Environment }}'
+     win_service:
+       name: 'AuthenticationService{{ Environment }}'
+       state: started
+  
+   - name: Start 'AutorizadorGenerico{{ Environment }}'
+     win_service:
+       name: 'AutorizadorGenerico{{ Environment }}'
+       state: started
+
+   - name: Start 'SanatorioAllendeBackEnd{{ Environment }}'
+     win_service:
+       name: 'SanatorioAllendeBackEnd{{ Environment }}'
+       state: started
+
+   - name: Start 'SanatorioAllendeBackEndPortal{{ Environment }}'
+     win_service:
+       name: 'SanatorioAllendeBackEndPortal{{ Environment }}'
+       state: started
+
+   - name: Start 'Terminologia{{ Environment }}'
+     win_service:
+       name: 'Terminologia{{ Environment }}'
+       state: started
+
+### Start Services workers
+
+   - name: Start 'BackupIMService{{ Environment }}'
+     win_service:
+       name: 'BackupIMService{{ Environment }}'
+       state: started
+
+   - name: Start 'CacheTerminologia{{ Environment }}'
+     win_service:
+       name: 'CacheTerminologia{{ Environment }}'
+       state: started
+
+   - name: Start 'ConfirmacionDeTurnosService{{ Environment }}'
+     win_service:
+       name: 'ConfirmacionDeTurnosService{{ Environment }}'
+       state: started
+  
+   - name: Start 'FacturaElectronicaService{{ Environment }}'
+     win_service:
+       name: 'FacturaElectronicaService{{ Environment }}'
+       state: started
+
+   - name: Start 'ImportadorDeFarmacosService{{ Environment }}'
+     win_service:
+       name: 'ImportadorDeFarmacosService{{ Environment }}'
+       state: started
+
+   - name: Start 'MessageIntegrationService{{ Environment }}'
+     win_service:
+       name: 'MessageIntegrationService{{ Environment }}'
+       state: started
+
+   - name: Start 'NotificacionDeSolicitudesPendientes{{ Environment }}'
+     win_service:
+       name: 'NotificacionDeSolicitudesPendientes{{ Environment }}'
+       state: started
+
+   - name: Start 'ReprocesadorDeIntegraciones{{ Environment }}'
+     win_service:
+       name: 'ReprocesadorDeIntegraciones{{ Environment }}'
+       state: started
+
+   - name: Start 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
+     win_service:
+       name: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
+       state: started
+
+   - name: Start 'RisIntegrationService{{ Environment }}'
+     win_service:
+       name: 'RisIntegrationService{{ Environment }}'
+       state: started
+
+### Start Services DogWatch
+
+   - name: Start 'DogWatcherService{{ Environment }}'
+     win_service:
+       name: 'DogWatcherService{{ Environment }}'
+       state: started
