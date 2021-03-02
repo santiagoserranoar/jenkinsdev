@@ -300,10 +300,6 @@
 ### Starteo Servicios Backend
 ### Start Services webapi
 ### ApiGateway
-   - name: get info on service 'ApiGateway{{ Environment }}'
-     win_service:
-       name: 'ApiGateway{{ Environment }}'
-     register: 'ApiGateway{{ Environment }}_service'
    - name: Inicio ApiGateway
      win_service:
        name: 'ApiGateway{{ Environment }}'
