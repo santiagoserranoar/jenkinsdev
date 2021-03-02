@@ -19,7 +19,7 @@
    - name: get info on service 'ApiGateway{{ Environment }}'
      win_service:
        name: 'ApiGateway{{ Environment }}'
-       register: 'ApiGateway{{ Environment }}_service'  
+     register: 'ApiGateway{{ Environment }}_service'  
    - name: Stop 'ApiGateway{{ Environment }}'
      win_service:
        name: 'ApiGateway{{ Environment }}'
@@ -30,7 +30,7 @@
    - name: get info on service 'ApiGatewayPortal{{ Environment }}'
      win_service:
        name: 'ApiGatewayPortal{{ Environment }}'
-       register: 'ApiGatewayPortal{{ Environment }}_service' 
+     register: 'ApiGatewayPortal{{ Environment }}_service' 
    - name: Stop 'ApiGatewayPortal{{ Environment }}'
      win_service:
        name: 'ApiGatewayPortal{{ Environment }}'
@@ -41,7 +41,7 @@
    - name: get info on service 'AuthenticationService{{ Environment }}'
      win_service:
        name: 'AuthenticationService{{ Environment }}'
-       register: 'AuthenticationService{{ Environment }}_service' 
+     register: 'AuthenticationService{{ Environment }}_service' 
    - name: Stop 'AuthenticationService{{ Environment }}'
      win_service:
        name: 'AuthenticationService{{ Environment }}'
@@ -52,7 +52,7 @@
    - name: get info on service 'AuthenticationService{{ Environment }}'
      win_service:
        name: 'AuthenticationService{{ Environment }}'
-       register: 'AuthenticationService{{ Environment }}_service' 
+     register: 'AuthenticationService{{ Environment }}_service' 
    - name: Stop 'AutorizadorGenerico{{ Environment }}'
      win_service:
        name: 'AutorizadorGenerico{{ Environment }}'
@@ -63,7 +63,7 @@
    - name: get info on service 'SanatorioAllendeBackEnd{{ Environment }}'
      win_service:
        name: 'SanatorioAllendeBackEnd{{ Environment }}'
-       register: 'SanatorioAllendeBackEnd{{ Environment }}_service'
+     register: 'SanatorioAllendeBackEnd{{ Environment }}_service'
    - name: Stop 'SanatorioAllendeBackEnd{{ Environment }}'
      win_service:
        name: 'SanatorioAllendeBackEnd{{ Environment }}'
@@ -74,7 +74,7 @@
    - name: get info on service 'SanatorioAllendeBackEndPortal{{ Environment }}'
      win_service:
        name: 'SanatorioAllendeBackEndPortal{{ Environment }}'
-       register: 'SanatorioAllendeBackEndPortal{{ Environment }}_service'
+     register: 'SanatorioAllendeBackEndPortal{{ Environment }}_service'
    - name: Stop 'SanatorioAllendeBackEndPortal{{ Environment }}'
      win_service:
        name: 'SanatorioAllendeBackEndPortal{{ Environment }}'
@@ -85,7 +85,7 @@
    - name: get info on service 'Terminologia{{ Environment }}'
      win_service:
        name: 'Terminologia{{ Environment }}'
-       register: 'Terminologia{{ Environment }}_service'
+     register: 'Terminologia{{ Environment }}_service'
    - name: Stop 'Terminologia{{ Environment }}'
      win_service:
        name: 'Terminologia{{ Environment }}'
@@ -98,7 +98,7 @@
    - name: get info on service 'BackupIMService{{ Environment }}'
      win_service:
        name: 'BackupIMService{{ Environment }}'
-       register: 'BackupIMService{{ Environment }}_service'
+     register: 'BackupIMService{{ Environment }}_service'
    - name: Stop 'BackupIMService{{ Environment }}'
      win_service:
        name: 'BackupIMService{{ Environment }}'
@@ -109,7 +109,7 @@
    - name: get info on service 'CacheTerminologia{{ Environment }}'
      win_service:
        name: 'CacheTerminologia{{ Environment }}'
-       register: 'CacheTerminologia{{ Environment }}_service'
+     register: 'CacheTerminologia{{ Environment }}_service'
    - name: Stop 'CacheTerminologia{{ Environment }}'
      win_service:
        name: 'CacheTerminologia{{ Environment }}'
@@ -120,7 +120,7 @@
    - name: get info on service 'ConfirmacionDeTurnosService{{ Environment }}'
      win_service:
        name: 'ConfirmacionDeTurnosService{{ Environment }}'
-       register: 'ConfirmacionDeTurnosService{{ Environment }}_service'
+     register: 'ConfirmacionDeTurnosService{{ Environment }}_service'
    - name: Stop 'ConfirmacionDeTurnosService{{ Environment }}'
      win_service:
        name: 'ConfirmacionDeTurnosService{{ Environment }}'
@@ -131,7 +131,7 @@
    - name: get info on service 'FacturaElectronicaService{{ Environment }}'
      win_service:
        name: 'FacturaElectronicaService{{ Environment }}'
-       register: 'FacturaElectronicaService{{ Environment }}_service'
+     register: 'FacturaElectronicaService{{ Environment }}_service'
    - name: Stop 'FacturaElectronicaService{{ Environment }}'
      win_service:
        name: 'FacturaElectronicaService{{ Environment }}'
@@ -142,7 +142,7 @@
    - name: get info on service 'ImportadorDeFarmacosService{{ Environment }}'
      win_service:
        name: 'ImportadorDeFarmacosService{{ Environment }}'
-       register: 'ImportadorDeFarmacosService{{ Environment }}_service'
+     register: 'ImportadorDeFarmacosService{{ Environment }}_service'
    - name: Stop 'ImportadorDeFarmacosService{{ Environment }}'
      win_service:
        name: 'ImportadorDeFarmacosService{{ Environment }}'
@@ -153,7 +153,7 @@
    - name: get info on service 'MessageIntegrationService{{ Environment }}'
      win_service:
        name: 'MessageIntegrationService{{ Environment }}'
-       register: 'MessageIntegrationService{{ Environment }}_service'
+     register: 'MessageIntegrationService{{ Environment }}_service'
    - name: Stop 'MessageIntegrationService{{ Environment }}'
      win_service:
        name: 'MessageIntegrationService{{ Environment }}'
@@ -164,7 +164,7 @@
    - name: get info on service 'NotificacionDeSolicitudesPendientes{{ Environment }}'
      win_service:
        name: 'NotificacionDeSolicitudesPendientes{{ Environment }}'
-       register: 'NotificacionDeSolicitudesPendientes{{ Environment }}_service'
+     register: 'NotificacionDeSolicitudesPendientes{{ Environment }}_service'
    - name: Stop 'NotificacionDeSolicitudesPendientes{{ Environment }}'
      win_service:
        name: 'NotificacionDeSolicitudesPendientes{{ Environment }}'
@@ -175,7 +175,7 @@
    - name: get info on service 'ReprocesadorDeIntegraciones{{ Environment }}'
      win_service:
        name: 'ReprocesadorDeIntegraciones{{ Environment }}'
-       register: 'ReprocesadorDeIntegraciones{{ Environment }}_service'
+     register: 'ReprocesadorDeIntegraciones{{ Environment }}_service'
    - name: Stop 'ReprocesadorDeIntegraciones{{ Environment }}'
      win_service:
        name: 'ReprocesadorDeIntegraciones{{ Environment }}'
@@ -186,7 +186,7 @@
    - name: get info on service 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
      win_service:
        name: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
-       register: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}_service'
+     register: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}_service'
    - name: Stop 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
      win_service:
        name: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
@@ -197,7 +197,7 @@
    - name: get info on service 'RisIntegrationService{{ Environment }}'
      win_service:
        name: 'RisIntegrationService{{ Environment }}'
-       register: 'RisIntegrationService{{ Environment }}_service'
+     register: 'RisIntegrationService{{ Environment }}_service'
    - name: Stop 'RisIntegrationService{{ Environment }}'
      win_service:
        name: 'RisIntegrationService{{ Environment }}'
@@ -303,18 +303,18 @@
    - name: get info on service 'ApiGateway{{ Environment }}'
      win_service:
        name: 'ApiGateway{{ Environment }}'
-       register: 'ApiGateway{{ Environment }}_service'  
+     register: 'ApiGateway{{ Environment }}_service'  
    - name: Start 'ApiGateway{{ Environment }}'
      win_service:
        name: 'ApiGateway{{ Environment }}'
-       state: started
+     state: started
      when: 'ApiGateway{{ Environment }}_service.exists'
 
 ### ApiGatewayPortal
    - name: get info on service 'ApiGatewayPortal{{ Environment }}'
      win_service:
        name: 'ApiGatewayPortal{{ Environment }}'
-       register: 'ApiGatewayPortal{{ Environment }}_service' 
+     register: 'ApiGatewayPortal{{ Environment }}_service' 
    - name: Start 'ApiGatewayPortal{{ Environment }}'
      win_service:
        name: 'ApiGatewayPortal{{ Environment }}'
@@ -325,7 +325,7 @@
    - name: get info on service 'AuthenticationService{{ Environment }}'
      win_service:
        name: 'AuthenticationService{{ Environment }}'
-       register: 'AuthenticationService{{ Environment }}_service' 
+     register: 'AuthenticationService{{ Environment }}_service' 
    - name: Start 'AuthenticationService{{ Environment }}'
      win_service:
        name: 'AuthenticationService{{ Environment }}'
@@ -336,7 +336,7 @@
    - name: get info on service 'AuthenticationService{{ Environment }}'
      win_service:
        name: 'AuthenticationService{{ Environment }}'
-       register: 'AuthenticationService{{ Environment }}_service' 
+     register: 'AuthenticationService{{ Environment }}_service' 
    - name: Start 'AutorizadorGenerico{{ Environment }}'
      win_service:
        name: 'AutorizadorGenerico{{ Environment }}'
@@ -347,7 +347,7 @@
    - name: get info on service 'SanatorioAllendeBackEnd{{ Environment }}'
      win_service:
        name: 'SanatorioAllendeBackEnd{{ Environment }}'
-       register: 'SanatorioAllendeBackEnd{{ Environment }}_service'
+     register: 'SanatorioAllendeBackEnd{{ Environment }}_service'
    - name: Start 'SanatorioAllendeBackEnd{{ Environment }}'
      win_service:
        name: 'SanatorioAllendeBackEnd{{ Environment }}'
@@ -358,7 +358,7 @@
    - name: get info on service 'SanatorioAllendeBackEndPortal{{ Environment }}'
      win_service:
        name: 'SanatorioAllendeBackEndPortal{{ Environment }}'
-       register: 'SanatorioAllendeBackEndPortal{{ Environment }}_service'
+     register: 'SanatorioAllendeBackEndPortal{{ Environment }}_service'
    - name: Start 'SanatorioAllendeBackEndPortal{{ Environment }}'
      win_service:
        name: 'SanatorioAllendeBackEndPortal{{ Environment }}'
@@ -369,7 +369,7 @@
    - name: get info on service 'Terminologia{{ Environment }}'
      win_service:
        name: 'Terminologia{{ Environment }}'
-       register: 'Terminologia{{ Environment }}_service'
+     register: 'Terminologia{{ Environment }}_service'
    - name: Start 'Terminologia{{ Environment }}'
      win_service:
        name: 'Terminologia{{ Environment }}'
@@ -382,7 +382,7 @@
    - name: get info on service 'BackupIMService{{ Environment }}'
      win_service:
        name: 'BackupIMService{{ Environment }}'
-       register: 'BackupIMService{{ Environment }}_service'
+     register: 'BackupIMService{{ Environment }}_service'
    - name: Start 'BackupIMService{{ Environment }}'
      win_service:
        name: 'BackupIMService{{ Environment }}'
@@ -393,7 +393,7 @@
    - name: get info on service 'CacheTerminologia{{ Environment }}'
      win_service:
        name: 'CacheTerminologia{{ Environment }}'
-       register: 'CacheTerminologia{{ Environment }}_service'
+     register: 'CacheTerminologia{{ Environment }}_service'
    - name: Start 'CacheTerminologia{{ Environment }}'
      win_service:
        name: 'CacheTerminologia{{ Environment }}'
@@ -404,7 +404,7 @@
    - name: get info on service 'ConfirmacionDeTurnosService{{ Environment }}'
      win_service:
        name: 'ConfirmacionDeTurnosService{{ Environment }}'
-       register: 'ConfirmacionDeTurnosService{{ Environment }}_service'
+     register: 'ConfirmacionDeTurnosService{{ Environment }}_service'
    - name: Start 'ConfirmacionDeTurnosService{{ Environment }}'
      win_service:
        name: 'ConfirmacionDeTurnosService{{ Environment }}'
@@ -415,7 +415,7 @@
    - name: get info on service 'FacturaElectronicaService{{ Environment }}'
      win_service:
        name: 'FacturaElectronicaService{{ Environment }}'
-       register: 'FacturaElectronicaService{{ Environment }}_service'
+     register: 'FacturaElectronicaService{{ Environment }}_service'
    - name: Start 'FacturaElectronicaService{{ Environment }}'
      win_service:
        name: 'FacturaElectronicaService{{ Environment }}'
@@ -426,7 +426,7 @@
    - name: get info on service 'ImportadorDeFarmacosService{{ Environment }}'
      win_service:
        name: 'ImportadorDeFarmacosService{{ Environment }}'
-       register: 'ImportadorDeFarmacosService{{ Environment }}_service'
+     register: 'ImportadorDeFarmacosService{{ Environment }}_service'
    - name: Start 'ImportadorDeFarmacosService{{ Environment }}'
      win_service:
        name: 'ImportadorDeFarmacosService{{ Environment }}'
@@ -437,7 +437,7 @@
    - name: get info on service 'MessageIntegrationService{{ Environment }}'
      win_service:
        name: 'MessageIntegrationService{{ Environment }}'
-       register: 'MessageIntegrationService{{ Environment }}_service'
+     register: 'MessageIntegrationService{{ Environment }}_service'
    - name: Start 'MessageIntegrationService{{ Environment }}'
      win_service:
        name: 'MessageIntegrationService{{ Environment }}'
@@ -448,7 +448,7 @@
    - name: get info on service 'NotificacionDeSolicitudesPendientes{{ Environment }}'
      win_service:
        name: 'NotificacionDeSolicitudesPendientes{{ Environment }}'
-       register: 'NotificacionDeSolicitudesPendientes{{ Environment }}_service'
+     register: 'NotificacionDeSolicitudesPendientes{{ Environment }}_service'
    - name: Start 'NotificacionDeSolicitudesPendientes{{ Environment }}'
      win_service:
        name: 'NotificacionDeSolicitudesPendientes{{ Environment }}'
@@ -459,7 +459,7 @@
    - name: get info on service 'ReprocesadorDeIntegraciones{{ Environment }}'
      win_service:
        name: 'ReprocesadorDeIntegraciones{{ Environment }}'
-       register: 'ReprocesadorDeIntegraciones{{ Environment }}_service'
+     register: 'ReprocesadorDeIntegraciones{{ Environment }}_service'
    - name: Start 'ReprocesadorDeIntegraciones{{ Environment }}'
      win_service:
        name: 'ReprocesadorDeIntegraciones{{ Environment }}'
@@ -470,7 +470,7 @@
    - name: get info on service 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
      win_service:
        name: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
-       register: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}_service'
+     register: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}_service'
    - name: Start 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
      win_service:
        name: 'ReprocesoAutorizacionesPendientesAud{{ Environment }}'
@@ -481,7 +481,7 @@
    - name: get info on service 'RisIntegrationService{{ Environment }}'
      win_service:
        name: 'RisIntegrationService{{ Environment }}'
-       register: 'RisIntegrationService{{ Environment }}_service'
+     register: 'RisIntegrationService{{ Environment }}_service'
    - name: Start 'RisIntegrationService{{ Environment }}'
      win_service:
        name: 'RisIntegrationService{{ Environment }}'
