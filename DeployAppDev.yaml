@@ -19,7 +19,7 @@
    - name: get info on service 'ApiGateway{{ Environment }}'
      win_service:
        name: 'ApiGateway{{ Environment }}'
-     register: 'ApiGateway{{ Environment }}_service'  
+     register: ApiGateway{{ Environment }}_service  
    - name: Stop 'ApiGateway{{ Environment }}'
      win_service:
        name: 'ApiGateway{{ Environment }}'
