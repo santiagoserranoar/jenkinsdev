@@ -9,33 +9,33 @@
 ### Stopeo Servicios Backend
 ### Stop Services DogWatch
 
-   - name: Stop 'DogWatcherService{{ Environment }}'
+   - name: Stop DogWatcherServiceDEV
      win_service:
-       name: 'DogWatcherService{{ Environment }}'
+       name: DogWatcherServiceDEV
        state: stopped
 
 ### Stop Services webapi
 ### ApiGateway
-   - name: get info on service 'ApiGateway{{ Environment }}'
+   - name: get info on service ApiGatewayDEV
      win_service:
-       name: 'ApiGateway{{ Environment }}'
-     register: ApiGateway{{ Environment }}_service  
-   - name: Stop 'ApiGateway{{ Environment }}'
+       name: ApiGatewayDEV
+     register: ApiGatewayDEV_service  
+   - name: Stop ApiGatewayDEV
      win_service:
-       name: 'ApiGateway{{ Environment }}'
+       name: ApiGatewayDEV
        state: stopped
-     when: 'ApiGateway{{ Environment }}_service.exists'
+     when: ApiGatewayDEV_service.exists
 
 ### ApiGatewayPortal
-   - name: get info on service 'ApiGatewayPortal{{ Environment }}'
+   - name: get info on service ApiGatewayPortalDEV
      win_service:
-       name: 'ApiGatewayPortal{{ Environment }}'
-     register: 'ApiGatewayPortal{{ Environment }}_service' 
-   - name: Stop 'ApiGatewayPortal{{ Environment }}'
+       name: ApiGatewayPortalDEV
+     register: ApiGatewayPortalDEV_service
+   - name: Stop ApiGatewayPortalDEV
      win_service:
-       name: 'ApiGatewayPortal{{ Environment }}'
+       name: ApiGatewayPortalDEV
        state: stopped
-     when: 'ApiGatewayPortal{{ Environment }}_service.exists'
+     when: ApiGatewayPortalDEV_service.exists
 
 ### AuthenticationService
    - name: get info on service 'AuthenticationService{{ Environment }}'
