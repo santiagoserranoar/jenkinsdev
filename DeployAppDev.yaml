@@ -213,105 +213,105 @@
        state: absent
    - name: Delete ApiGatewayService
      win_file:
-       path: '"{{ dirDeploy }}"ApiGatewayService'
+       path: C:\ServiciosSA\DEV\ApiGatewayService
        state: absent
    - name: Delete AuthenticationService
      win_file:
-       path: '"{{ dirDeploy }}"AuthenticationService'
+       path: C:\ServiciosSA\DEV\AuthenticationService
        state: absent
    - name: Delete BackendService
      win_file:
-       path: '"{{ dirDeploy }}"BackendService'
+       path: C:\ServiciosSA\DEV\BackendService
        state: absent
    - name: Delete BackupIMService
      win_file:
-       path: '"{{ dirDeploy }}"BackupIMService'
+       path: C:\ServiciosSA\DEV\BackupIMService
        state: absent
    - name: Delete CacheTerminologiaService
      win_file:
-       path: '"{{ dirDeploy }}"CacheTerminologiaService'
+       path: C:\ServiciosSA\DEV\CacheTerminologiaService
        state: absent
    - name: Delete ConfirmacionDeTurnosService
      win_file:
-       path: '"{{ dirDeploy }}"ConfirmacionDeTurnosService'
+       path: C:\ServiciosSA\DEV\ConfirmacionDeTurnosService
        state: absent
    - name: Delete NotificacionDeSolicitudesPendientesService
      win_file:
-       path: '"{{ dirDeploy }}"NotificacionDeSolicitudesPendientesService'
+       path: C:\ServiciosSA\DEV\NotificacionDeSolicitudesPendientesService
        state: absent
    - name: Delete PortalService
      win_file:
-       path: '"{{ dirDeploy }}"PortalService'
+       path: C:\ServiciosSA\DEV\PortalService
        state: absent
    - name: Delete ReprocesadorDeIntegraciones
      win_file:
-       path: '"{{ dirDeploy }}"ReprocesadorDeIntegraciones'
+       path: C:\ServiciosSA\DEV\ReprocesadorDeIntegraciones
        state: absent
    - name: Delete ReprocesoAutorizacionesPendientesAud
      win_file:
-       path: '"{{ dirDeploy }}"ReprocesoAutorizacionesPendientesAud'
+       path: C:\ServiciosSA\DEV\ReprocesoAutorizacionesPendientesAud
        state: absent
    - name: Delete RisIntegrationService
      win_file:
-       path: '"{{ dirDeploy }}"RisIntegrationService'
+       path: C:\ServiciosSA\DEV\RisIntegrationService
        state: absent
    - name: Delete TerminologiaService
      win_file:
-       path: '"{{ dirDeploy }}"TerminologiaService'
+       path: C:\ServiciosSA\DEV\TerminologiaService
        state: absent
 
 ### Creo Carpetas de Servicios
    - name: Create ApiGatewayPortalService
      win_file:
-       path: '"{{ dirDeploy }}"ApiGatewayPortalService'
+       path: C:\ServiciosSA\DEV\ApiGatewayPortalService
        state: directory
    - name: Create ApiGatewayService
      win_file:
-       path: '"{{ dirDeploy }}"ApiGatewayService'
+       path: C:\ServiciosSA\DEV\ApiGatewayService
        state: directory
    - name: Create AuthenticationService
      win_file:
-       path: '"{{ dirDeploy }}"AuthenticationService'
+       path: C:\ServiciosSA\DEV\AuthenticationService
        state: directory
    - name: Create BackendService
      win_file:
-       path: '"{{ dirDeploy }}"BackendService'
+       path: C:\ServiciosSA\DEV\BackendService
        state: directory
    - name: Create BackupIMService
      win_file:
-       path: '"{{ dirDeploy }}"BackupIMService'
+       path: C:\ServiciosSA\DEV\BackupIMService
        state: directory
    - name: Create CacheTerminologiaService
      win_file:
-       path: '"{{ dirDeploy }}"CacheTerminologiaService'
+       path: C:\ServiciosSA\DEV\CacheTerminologiaService
        state: directory
    - name: Create ConfirmacionDeTurnosService
      win_file:
-       path: '"{{ dirDeploy }}"ConfirmacionDeTurnosService'
+       path: C:\ServiciosSA\DEV\ConfirmacionDeTurnosService
        state: directory
    - name: Create NotificacionDeSolicitudesPendientesService
      win_file:
-       path: '"{{ dirDeploy }}"NotificacionDeSolicitudesPendientesService'
+       path: C:\ServiciosSA\DEV\NotificacionDeSolicitudesPendientesService
        state: directory
    - name: Create PortalService
      win_file:
-       path: '"{{ dirDeploy }}"PortalService'
+       path: C:\ServiciosSA\DEV\PortalService
        state: directory
    - name: Create ReprocesadorDeIntegraciones
      win_file:
-       path: '"{{ dirDeploy }}"ReprocesadorDeIntegraciones'
+       path: C:\ServiciosSA\DEV\ReprocesadorDeIntegraciones
        state: directory
    - name: Create ReprocesoAutorizacionesPendientesAud
      win_file:
-       path: '"{{ dirDeploy }}"ReprocesoAutorizacionesPendientesAud'
+       path: C:\ServiciosSA\DEV\ReprocesoAutorizacionesPendientesAud
        state: directory
    - name: Create RisIntegrationService
      win_file:
-       path: '"{{ dirDeploy }}"RisIntegrationService'
+       path: C:\ServiciosSA\DEV\RisIntegrationService
        state: directory
    - name: Create TerminologiaService
      win_file:
-       path: '"{{ dirDeploy }}"TerminologiaService'
+       path: C:\ServiciosSA\DEV\TerminologiaService
        state: directory
 
 ### Copio Carpetas de nuevo Deploy
