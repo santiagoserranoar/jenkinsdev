@@ -209,7 +209,7 @@
 
    - name: Delete ApiGatewayPortalService
      win_file:
-       path: '"{{ dirDeploy }}"ApiGatewayPortalService'
+       path: C:\ServiciosSA\DEV\ApiGatewayPortalService
        state: absent
    - name: Delete ApiGatewayService
      win_file:
