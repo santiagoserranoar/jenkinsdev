@@ -9,8 +9,8 @@
      register: found_directories
 
    - name: imprimo
-       msg: "{{ [item.path] }} "
-       with_items: "{{ found_directories.files }}"
+     msg: "{{ [item.path] }} "
+     with_items: "{{ found_directories.files }}"
 
 
   
