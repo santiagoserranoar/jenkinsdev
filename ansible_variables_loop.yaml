@@ -8,11 +8,19 @@
        file_type: directory
      register: found_directories
 
-   - name: Copia ficheros
-     copy: 
-      src: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
-      dest: /tmp/
+- hosts: backendevinfra
+  tasks:
+   - name: Delete ApiGatewayPortal
+     win_file:
+        path: C:\ServiciosSA\DEV\
+        state: absent
      with_items: "{{ found_directories.files }}"
+
+#   - name: Copia ficheros
+#     copy: 
+#      src: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
+#      dest: /tmp/
+#     with_items: "{{ found_directories.files }}"
 
 
   
