@@ -207,41 +207,41 @@
 
 ### Elimino Carpetas de Servicios
 
-   - name: Delete ApiGatewayPortalService
+   - name: Delete ApiGatewayPortal
      win_file:
-       path: C:\ServiciosSA\DEV\ApiGatewayPortalService
+       path: C:\ServiciosSA\DEV\ApiGatewayPortal
        state: absent
-   - name: Delete ApiGatewayService
+   - name: Delete ApiGateway
      win_file:
-       path: C:\ServiciosSA\DEV\ApiGatewayService
+       path: C:\ServiciosSA\DEV\ApiGateway
        state: absent
-   - name: Delete AuthenticationService
+   - name: Delete Authentication
      win_file:
-       path: C:\ServiciosSA\DEV\AuthenticationService
+       path: C:\ServiciosSA\DEV\Authentication
        state: absent
-   - name: Delete BackendService
+   - name: Delete Backend
      win_file:
-       path: C:\ServiciosSA\DEV\BackendService
+       path: C:\ServiciosSA\DEV\Backend
        state: absent
-   - name: Delete BackupIMService
+   - name: Delete BackupIM
      win_file:
-       path: C:\ServiciosSA\DEV\BackupIMService
+       path: C:\ServiciosSA\DEV\BackupIM
        state: absent
-   - name: Delete CacheTerminologiaService
+   - name: Delete CacheTerminologia
      win_file:
-       path: C:\ServiciosSA\DEV\CacheTerminologiaService
+       path: C:\ServiciosSA\DEV\CacheTerminologia
        state: absent
-   - name: Delete ConfirmacionDeTurnosService
+   - name: Delete ConfirmacionDeTurnos
      win_file:
-       path: C:\ServiciosSA\DEV\ConfirmacionDeTurnosService
+       path: C:\ServiciosSA\DEV\ConfirmacionDeTurnos
        state: absent
-   - name: Delete NotificacionDeSolicitudesPendientesService
+   - name: Delete NotificacionDeSolicitudesPendientes
      win_file:
-       path: C:\ServiciosSA\DEV\NotificacionDeSolicitudesPendientesService
+       path: C:\ServiciosSA\DEV\NotificacionDeSolicitudesPendientes
        state: absent
-   - name: Delete PortalService
+   - name: Delete BackendPortal
      win_file:
-       path: C:\ServiciosSA\DEV\PortalService
+       path: C:\ServiciosSA\DEV\BackendPortal
        state: absent
    - name: Delete ReprocesadorDeIntegraciones
      win_file:
@@ -251,51 +251,51 @@
      win_file:
        path: C:\ServiciosSA\DEV\ReprocesoAutorizacionesPendientesAud
        state: absent
-   - name: Delete RisIntegrationService
+   - name: Delete RisIntegration
      win_file:
-       path: C:\ServiciosSA\DEV\RisIntegrationService
+       path: C:\ServiciosSA\DEV\RisIntegration
        state: absent
-   - name: Delete TerminologiaService
+   - name: Delete Terminologia
      win_file:
-       path: C:\ServiciosSA\DEV\TerminologiaService
+       path: C:\ServiciosSA\DEV\Terminologia
        state: absent
 
 ### Creo Carpetas de Servicios
-   - name: Create ApiGatewayPortalService
+   - name: Create ApiGatewayPortal
      win_file:
-       path: C:\ServiciosSA\DEV\ApiGatewayPortalService
+       path: C:\ServiciosSA\DEV\ApiGatewayPortal
        state: directory
-   - name: Create ApiGatewayService
+   - name: Create ApiGateway
      win_file:
-       path: C:\ServiciosSA\DEV\ApiGatewayService
+       path: C:\ServiciosSA\DEV\ApiGateway
        state: directory
-   - name: Create AuthenticationService
+   - name: Create Authentication
      win_file:
-       path: C:\ServiciosSA\DEV\AuthenticationService
+       path: C:\ServiciosSA\DEV\Authentication
        state: directory
-   - name: Create BackendService
+   - name: Create Backend
      win_file:
-       path: C:\ServiciosSA\DEV\BackendService
+       path: C:\ServiciosSA\DEV\Backend
        state: directory
-   - name: Create BackupIMService
+   - name: Create BackupIM
      win_file:
-       path: C:\ServiciosSA\DEV\BackupIMService
+       path: C:\ServiciosSA\DEV\BackupIM
        state: directory
-   - name: Create CacheTerminologiaService
+   - name: Create CacheTerminologia
      win_file:
-       path: C:\ServiciosSA\DEV\CacheTerminologiaService
+       path: C:\ServiciosSA\DEV\CacheTerminologia
        state: directory
-   - name: Create ConfirmacionDeTurnosService
+   - name: Create ConfirmacionDeTurnos
      win_file:
-       path: C:\ServiciosSA\DEV\ConfirmacionDeTurnosService
+       path: C:\ServiciosSA\DEV\ConfirmacionDeTurnos
        state: directory
-   - name: Create NotificacionDeSolicitudesPendientesService
+   - name: Create NotificacionDeSolicitudesPendientes
      win_file:
-       path: C:\ServiciosSA\DEV\NotificacionDeSolicitudesPendientesService
+       path: C:\ServiciosSA\DEV\NotificacionDeSolicitudesPendientes
        state: directory
-   - name: Create PortalService
+   - name: Create Portal
      win_file:
-       path: C:\ServiciosSA\DEV\PortalService
+       path: C:\ServiciosSA\DEV\Portal
        state: directory
    - name: Create ReprocesadorDeIntegraciones
      win_file:
@@ -305,75 +305,75 @@
      win_file:
        path: C:\ServiciosSA\DEV\ReprocesoAutorizacionesPendientesAud
        state: directory
-   - name: Create RisIntegrationService
+   - name: Create RisIntegration
      win_file:
-       path: C:\ServiciosSA\DEV\RisIntegrationService
+       path: C:\ServiciosSA\DEV\RisIntegration
        state: directory
-   - name: Create TerminologiaService
+   - name: Create Terminologia
      win_file:
-       path: C:\ServiciosSA\DEV\TerminologiaService
+       path: C:\ServiciosSA\DEV\Terminologia
        state: directory
 
 ### Copio Carpetas de nuevo Deploy
 
-   - name: Copy ApiGatewayPortalService
+   - name: Copy ApiGatewayPortal
      win_copy:
-       src: '{{ workSpace }}ApiGatewayPortalService'
+       src: '{{ workSpace }}ApiGatewayPortal'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy ApiGatewayService
+   - name: Copy ApiGateway
      win_copy:
-       src: '{{ workSpace }}ApiGatewayService'
+       src: '{{ workSpace }}ApiGateway'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy AuthenticationService
+   - name: Copy Authentication
      win_copy:
-       src: '{{ workSpace }}AuthenticationService'
+       src: '{{ workSpace }}Authentication'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy BackendService
+   - name: Copy Backend
      win_copy:
-       src: '{{ workSpace }}BackendService'
+       src: '{{ workSpace }}Backend'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy BackupIMService
+   - name: Copy BackupIM
      win_copy:
-       src: '{{ workSpace }}BackupIMService'
+       src: '{{ workSpace }}BackupIM'
        dest: "{{ dirDeploy }}"
   
-   - name: Copy CacheTerminologiaService
+   - name: Copy CacheTerminologia
      win_copy:
-       src: '{{ workSpace }}CacheTerminologiaService'
+       src: '{{ workSpace }}CacheTerminologia'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy ConfirmacionDeTurnosService
+   - name: Copy ConfirmacionDeTurnos
      win_copy:
-       src: '{{ workSpace }}ConfirmacionDeTurnosService'
+       src: '{{ workSpace }}ConfirmacionDeTurnos'
        dest: "{{ dirDeploy }}"
   
-   - name: Copy FacturaElectronicaService
+   - name: Copy FacturaElectronica
      win_copy:
-       src: '{{ workSpace }}FacturaElectronicaService'
+       src: '{{ workSpace }}FacturaElectronica'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy ImportadorDeFarmacosService
+   - name: Copy ImportadorDeFarmacos
      win_copy:
-       src: '{{ workSpace }}ImportadorDeFarmacosService'
+       src: '{{ workSpace }}ImportadorDeFarmacos'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy MessageIntegrationService
+   - name: Copy MessageIntegration
      win_copy:
-       src: '{{ workSpace }}MessageIntegrationService'
+       src: '{{ workSpace }}MessageIntegration'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy NotificacionDeSolicitudesPendientesService
+   - name: Copy NotificacionDeSolicitudesPendientes
      win_copy:
-       src: '{{ workSpace }}NotificacionDeSolicitudesPendientesService'
+       src: '{{ workSpace }}NotificacionDeSolicitudesPendientes'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy PortalService
+   - name: Copy Portal
      win_copy:
-       src: '{{ workSpace }}PortalService'
+       src: '{{ workSpace }}Portal'
        dest: "{{ dirDeploy }}"
 
    - name: Copy ReprocesadorDeIntegraciones
@@ -386,14 +386,14 @@
        src: '{{ workSpace }}ReprocesoAutorizacionesPendientesAud'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy RisIntegrationService
+   - name: Copy RisIntegration
      win_copy:
-       src: '{{ workSpace }}RisIntegrationService'
+       src: '{{ workSpace }}RisIntegration'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy TerminologiaService
+   - name: Copy Terminologia
      win_copy:
-       src: '{{ workSpace }}TerminologiaService'
+       src: '{{ workSpace }}Terminologia'
        dest: "{{ dirDeploy }}"
 
 ### Starteo Servicios Backend
