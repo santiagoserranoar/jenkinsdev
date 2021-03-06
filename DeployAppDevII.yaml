@@ -251,9 +251,9 @@
      win_file:
        path: C:\ServiciosSA\DEV\ReprocesoAutorizacionesPendientesAud
        state: absent
-   - name: Delete RisIntegration
+   - name: Delete RisIntegrationService
      win_file:
-       path: C:\ServiciosSA\DEV\RisIntegration
+       path: C:\ServiciosSA\DEV\RisIntegrationService
        state: absent
    - name: Delete Terminologia
      win_file:
@@ -453,11 +453,10 @@
 
 
 ### MessageIntegrationService
-
-   - name: Start MessageIntegrationServiceDEV
-     win_service:
-       name: MessageIntegrationServiceDEV
-       state: started
+#   - name: Start MessageIntegrationServiceDEV
+#     win_service:
+#       name: MessageIntegrationServiceDEV
+#       state: started
 
 
 ### NotificacionDeSolicitudesPendientes
@@ -491,7 +490,7 @@
 
 ### Start Services DogWatch
 
-   - name: Start 'DogWatcherService{{ Environment }}'
+   - name: Start DogWatcherServiceDEV
      win_service:
-       name: 'DogWatcherService{{ Environment }}'
+       name: DogWatcherServiceDEV
        state: started
