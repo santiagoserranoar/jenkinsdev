@@ -319,7 +319,7 @@
 
    - name: Copy MessageIntegration
      win_copy:
-       src: '{{ workSpace }}MessageIntegration'
+       src: '{{ workSpace }}Integraciones'
        dest: "{{ dirDeploy }}"
 
    - name: Copy NotificacionDeSolicitudesPendientes
