@@ -259,9 +259,9 @@
      win_file:
        path: C:\ServiciosSA\DEV\Terminologia
        state: absent
-   - name: Delete FacturaElectronica
+   - name: Delete FacturacionElectronica
      win_file:
-       path: C:\ServiciosSA\DEV\FacturaElectronica
+       path: C:\ServiciosSA\DEV\FacturacionElectronica
        state: absent
    - name: Delete Integraciones
      win_file:
@@ -307,9 +307,9 @@
        src: '{{ workSpace }}ConfirmacionDeTurnos'
        dest: "{{ dirDeploy }}"
   
-   - name: Copy FacturaElectronica
+   - name: Copy FacturacionElectronica
      win_copy:
-       src: '{{ workSpace }}FacturaElectronica'
+       src: '{{ workSpace }}FacturacionElectronica'
        dest: "{{ dirDeploy }}"
 
    - name: Copy ImportadorDeFarmacos
