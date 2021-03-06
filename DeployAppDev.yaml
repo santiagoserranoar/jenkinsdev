@@ -259,60 +259,16 @@
      win_file:
        path: C:\ServiciosSA\DEV\Terminologia
        state: absent
+   - name: Delete FacturaElectronica
+     win_file:
+       path: C:\ServiciosSA\DEV\FacturaElectronica
+       state: absent
+   - name: Delete Integraciones
+     win_file:
+       path: C:\ServiciosSA\DEV\Integraciones
+       state: absent
 
 ### Creo Carpetas de Servicios
-   - name: Create ApiGatewayPortal
-     win_file:
-       path: C:\ServiciosSA\DEV\ApiGatewayPortal
-       state: directory
-   - name: Create ApiGateway
-     win_file:
-       path: C:\ServiciosSA\DEV\ApiGateway
-       state: directory
-   - name: Create Authentication
-     win_file:
-       path: C:\ServiciosSA\DEV\Authentication
-       state: directory
-   - name: Create Backend
-     win_file:
-       path: C:\ServiciosSA\DEV\Backend
-       state: directory
-   - name: Create BackupIM
-     win_file:
-       path: C:\ServiciosSA\DEV\BackupIM
-       state: directory
-   - name: Create CacheTerminologia
-     win_file:
-       path: C:\ServiciosSA\DEV\CacheTerminologia
-       state: directory
-   - name: Create ConfirmacionDeTurnos
-     win_file:
-       path: C:\ServiciosSA\DEV\ConfirmacionDeTurnos
-       state: directory
-   - name: Create NotificacionDeSolicitudesPendientes
-     win_file:
-       path: C:\ServiciosSA\DEV\NotificacionDeSolicitudesPendientes
-       state: directory
-   - name: Create Portal
-     win_file:
-       path: C:\ServiciosSA\DEV\Portal
-       state: directory
-   - name: Create ReprocesadorDeIntegraciones
-     win_file:
-       path: C:\ServiciosSA\DEV\ReprocesadorDeIntegraciones
-       state: directory
-   - name: Create ReprocesoAutorizacionesPendientesAud
-     win_file:
-       path: C:\ServiciosSA\DEV\ReprocesoAutorizacionesPendientesAud
-       state: directory
-   - name: Create RisIntegration
-     win_file:
-       path: C:\ServiciosSA\DEV\RisIntegration
-       state: directory
-   - name: Create Terminologia
-     win_file:
-       path: C:\ServiciosSA\DEV\Terminologia
-       state: directory
 
 ### Copio Carpetas de nuevo Deploy
 
@@ -476,7 +432,7 @@
      when: TerminologiaDEV_service.exists
 
 
-### Stop Services workers
+### Start Services workers
 ### BackupIMService
    - name: get info on service BackupIMServiceDEV
      win_service:
