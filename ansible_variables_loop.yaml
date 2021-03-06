@@ -1,6 +1,6 @@
 - hosts: localhost
   tasks:
-- name: ls -l /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
+- name: busco carpetas
   find:
     paths: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
     patterns: "*"
