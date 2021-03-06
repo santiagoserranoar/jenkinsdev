@@ -331,9 +331,9 @@
        src: '{{ workSpace }}Authentication'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy Backend
+   - name: Copy BackEnd
      win_copy:
-       src: '{{ workSpace }}Backend'
+       src: '{{ workSpace }}BackEnd'
        dest: "{{ dirDeploy }}"
 
    - name: Copy BackupIM
@@ -371,9 +371,9 @@
        src: '{{ workSpace }}NotificacionDeSolicitudesPendientes'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy Portal
+   - name: Copy BackEndPortal
      win_copy:
-       src: '{{ workSpace }}Portal'
+       src: '{{ workSpace }}BackEndPortal'
        dest: "{{ dirDeploy }}"
 
    - name: Copy ReprocesadorDeIntegraciones
@@ -386,9 +386,9 @@
        src: '{{ workSpace }}ReprocesoAutorizacionesPendientesAud'
        dest: "{{ dirDeploy }}"
 
-   - name: Copy RisIntegration
+   - name: Copy RisIntegrationService
      win_copy:
-       src: '{{ workSpace }}RisIntegration'
+       src: '{{ workSpace }}RisIntegrationService'
        dest: "{{ dirDeploy }}"
 
    - name: Copy Terminologia
