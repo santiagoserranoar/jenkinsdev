@@ -12,7 +12,7 @@
   tasks:
    - name: Delete ApiGatewayPortal
      win_file:
-        path: C:\ServiciosSA\DEV\
+        path: C:\ServiciosSA\DEV\{{ item }}
         state: absent
      with_items: "{{ found_directories.files }}"
 
