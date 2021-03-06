@@ -445,18 +445,18 @@
 
 
 ### ImportadorDeFarmacosService
-
-   - name: Start ImportadorDeFarmacosServiceDEV
-     win_service:
-       name: ImportadorDeFarmacosServiceDEV
-       state: started
-
-
-### MessageIntegrationService
-#   - name: Start MessageIntegrationServiceDEV
+#
+#   - name: Start ImportadorDeFarmacosServiceDEV
 #     win_service:
-#       name: MessageIntegrationServiceDEV
+#       name: ImportadorDeFarmacosServiceDEV
 #       state: started
+
+
+### MessageIntegrationServiceDEV
+   - name: Start MessageIntegrationServiceDEV
+     win_service:
+       name: MessageIntegrationServiceDEV
+       state: started
 
 
 ### NotificacionDeSolicitudesPendientes
