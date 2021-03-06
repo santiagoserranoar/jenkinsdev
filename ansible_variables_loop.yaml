@@ -3,13 +3,15 @@
    - name: busco carpetas
      find:
        paths: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
-       patterns: "*"
+#       patterns: "*"
        recurse: no
        file_type: directory
      register: found_directories
 
-   - name: imprimo
-     msg: "{{ [item.path] }} "
+   - name: Copia ficheros
+     copy: 
+      src: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
+      dest: /tmp/
      with_items: "{{ found_directories.files }}"
 
 
