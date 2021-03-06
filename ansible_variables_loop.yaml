@@ -1,15 +1,16 @@
 - hosts: localhost
   tasks:
-- name: busco carpetas
-  find:
-    paths: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
-    patterns: "*"
-    recurse: no
-    file_type: directory
-  register: found_directories
+   - name: busco carpetas
+     find:
+       paths: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
+       patterns: "*"
+       recurse: no
+       file_type: directory
+     register: found_directories
 
-- debug:
-    msg: "{{ [item.path] }} "
-  with_items: "{{ found_directories.files }}"
+   - debug:
+       msg: "{{ [item.path] }} "
+       with_items: "{{ found_directories.files }}"
 
 
+  
