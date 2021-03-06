@@ -8,7 +8,7 @@
        file_type: directory
      register: found_directories
 
-   - debug:
+   - name: imprimo
        msg: "{{ [item.path] }} "
        with_items: "{{ found_directories.files }}"
 
