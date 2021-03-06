@@ -172,15 +172,15 @@
      when: NotificacionDeSolicitudesPendientesDEV_service.exists
 
 ### ReprocesadorDeIntegraciones
-   - name: get info on service ReprocesadorDeIntegracionesDEV
+   - name: get info on service SA-Reprocesador
      win_service:
-       name: ReprocesadorDeIntegracionesDEV
-     register: ReprocesadorDeIntegracionesDEV_service
-   - name: Stop ReprocesadorDeIntegracionesDEV
+       name: SA-Reprocesador
+     register: SA-Reprocesador
+   - name: Stop SA-Reprocesador
      win_service:
-       name: ReprocesadorDeIntegracionesDEV
+       name: SA-Reprocesador
        state: stopped
-     when: ReprocesadorDeIntegracionesDEV_service.exists
+     when: SA-Reprocesador_service.exists
 
 ### ReprocesoAutorizacionesPendientesAud
    - name: get info on service ReprocesoAutorizacionesPendientesAudDEV
@@ -322,9 +322,9 @@
 
 ### ReprocesadorDeIntegraciones
 
-   - name: Start ReprocesadorDeIntegracionesDEV
+   - name: Start SA-Reprocesador
      win_service:
-       name: ReprocesadorDeIntegracionesDEV
+       name: SA-Reprocesador
        state: started
 
 
