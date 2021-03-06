@@ -3,7 +3,6 @@
    - name: busco carpetas
      find:
        paths: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
-#       patterns: "*"
        recurse: no
        file_type: directory
      register: found_directories
