@@ -1,281 +1,281 @@
-- hosts: backendevinfra
+- hosts: backendev
   vars:
-   dirDeploy: C:\ServiciosSA\DEV\
+   dirDeploy: C:\ServiciosInfra\DEV\
    workSpace: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/
    Environment: DEV
    
   tasks:
 
-########################################################################### Manejo Servicios
-### Stop Services DogWatch
-   - name: Stop DogWatcherServiceDEV
-     win_service:
-       name: DogWatcherServiceDEV
-       state: stopped
+# ########################################################################### Manejo Servicios
+# ### Stop Services DogWatch
+#    - name: Stop DogWatcherServiceDEV
+#      win_service:
+#        name: DogWatcherServiceDEV
+#        state: stopped
 
-### ApiGateway
-   - name: get info on service ApiGatewayDEV
-     win_service:
-       name: ApiGatewayDEV
-     register: ApiGatewayDEV_service  
-   - name: Stop ApiGatewayDEV
-     win_service:
-       name: ApiGatewayDEV
-       state: stopped
-     when: ApiGatewayDEV_service.exists
+# ### ApiGateway
+#    - name: get info on service ApiGatewayDEV
+#      win_service:
+#        name: ApiGatewayDEV
+#      register: ApiGatewayDEV_service  
+#    - name: Stop ApiGatewayDEV
+#      win_service:
+#        name: ApiGatewayDEV
+#        state: stopped
+#      when: ApiGatewayDEV_service.exists
 
-### ApiGatewayPortal
-   - name: get info on service ApiGatewayPortalDEV
-     win_service:
-       name: ApiGatewayPortalDEV
-     register: ApiGatewayPortalDEV_service
-   - name: Stop ApiGatewayPortalDEV
-     win_service:
-       name: ApiGatewayPortalDEV
-       state: stopped
-     when: ApiGatewayPortalDEV_service.exists
+# ### ApiGatewayPortal
+#    - name: get info on service ApiGatewayPortalDEV
+#      win_service:
+#        name: ApiGatewayPortalDEV
+#      register: ApiGatewayPortalDEV_service
+#    - name: Stop ApiGatewayPortalDEV
+#      win_service:
+#        name: ApiGatewayPortalDEV
+#        state: stopped
+#      when: ApiGatewayPortalDEV_service.exists
 
-### AuthenticationService
-   - name: get info on service AuthenticationServiceDEV
-     win_service:
-       name: AuthenticationServiceDEV
-     register: AuthenticationServiceDEV_service
-   - name: Stop AuthenticationServiceDEV
-     win_service:
-       name: AuthenticationServiceDEV
-       state: stopped
-     when: AuthenticationServiceDEV_service.exists
+# ### AuthenticationService
+#    - name: get info on service AuthenticationServiceDEV
+#      win_service:
+#        name: AuthenticationServiceDEV
+#      register: AuthenticationServiceDEV_service
+#    - name: Stop AuthenticationServiceDEV
+#      win_service:
+#        name: AuthenticationServiceDEV
+#        state: stopped
+#      when: AuthenticationServiceDEV_service.exists
      
-### AutorizadorGenerico
-   - name: get info on service AutorizadorGenericoDEV
-     win_service:
-       name: AutorizadorGenericoDEV
-     register: AutorizadorGenericoDEV_service
-   - name: Stop AutorizadorGenericoDEV
-     win_service:
-       name: AutorizadorGenericoDEV
-       state: stopped
-     when: AutorizadorGenericoDEV_service.exists
+# ### AutorizadorGenerico
+#    - name: get info on service AutorizadorGenericoDEV
+#      win_service:
+#        name: AutorizadorGenericoDEV
+#      register: AutorizadorGenericoDEV_service
+#    - name: Stop AutorizadorGenericoDEV
+#      win_service:
+#        name: AutorizadorGenericoDEV
+#        state: stopped
+#      when: AutorizadorGenericoDEV_service.exists
 
-### BackupIMService
-   - name: get info on service BackupIMServiceDEV
-     win_service:
-       name: BackupIMServiceDEV
-     register: BackupIMServiceDEV_service
-   - name: Stop BackupIMServiceDEV
-     win_service:
-       name: BackupIMServiceDEV
-       state: stopped
-     when: BackupIMServiceDEV_service.exists
+# ### BackupIMService
+#    - name: get info on service BackupIMServiceDEV
+#      win_service:
+#        name: BackupIMServiceDEV
+#      register: BackupIMServiceDEV_service
+#    - name: Stop BackupIMServiceDEV
+#      win_service:
+#        name: BackupIMServiceDEV
+#        state: stopped
+#      when: BackupIMServiceDEV_service.exists
 
-### CacheTerminologia
-   - name: get info on service CacheTerminologiaDEV
-     win_service:
-       name: CacheTerminologiaDEV
-     register: CacheTerminologiaDEV_service
-   - name: Stop CacheTerminologiaDEV
-     win_service:
-       name: CacheTerminologiaDEV
-       state: stopped
-     when: CacheTerminologiaDEV_service.exists
+# ### CacheTerminologia
+#    - name: get info on service CacheTerminologiaDEV
+#      win_service:
+#        name: CacheTerminologiaDEV
+#      register: CacheTerminologiaDEV_service
+#    - name: Stop CacheTerminologiaDEV
+#      win_service:
+#        name: CacheTerminologiaDEV
+#        state: stopped
+#      when: CacheTerminologiaDEV_service.exists
 
-### NotificacionDeSolicitudesPendientes
-   - name: get info on service NotificacionDeSolicitudesPendientesDEV
-     win_service:
-       name: NotificacionDeSolicitudesPendientesDEV
-     register: NotificacionDeSolicitudesPendientesDEV_service
-   - name: Stop NotificacionDeSolicitudesPendientesDEV
-     win_service:
-       name: NotificacionDeSolicitudesPendientesDEV
-       state: stopped
-     when: NotificacionDeSolicitudesPendientesDEV_service.exists
+# ### NotificacionDeSolicitudesPendientes
+#    - name: get info on service NotificacionDeSolicitudesPendientesDEV
+#      win_service:
+#        name: NotificacionDeSolicitudesPendientesDEV
+#      register: NotificacionDeSolicitudesPendientesDEV_service
+#    - name: Stop NotificacionDeSolicitudesPendientesDEV
+#      win_service:
+#        name: NotificacionDeSolicitudesPendientesDEV
+#        state: stopped
+#      when: NotificacionDeSolicitudesPendientesDEV_service.exists
 
-### ReparacionInternacionDEV
-   - name: get info on service ReparacionInternacionDEV
-     win_service:
-       name: ReparacionInternacionDEV
-     register: ReparacionInternacionDEV_service
-   - name: Stop ReparacionInternacionDEV
-     win_service:
-       name: ReparacionInternacionDEV
-       state: stopped
-     when: ReparacionInternacionDEV_service.exists
+# ### ReparacionInternacionDEV
+#    - name: get info on service ReparacionInternacionDEV
+#      win_service:
+#        name: ReparacionInternacionDEV
+#      register: ReparacionInternacionDEV_service
+#    - name: Stop ReparacionInternacionDEV
+#      win_service:
+#        name: ReparacionInternacionDEV
+#        state: stopped
+#      when: ReparacionInternacionDEV_service.exists
 
-### ReprocesoAutorizacionesPendientesAudDEV
-   - name: get info on service ReprocesoAutorizacionesPendientesAudDEV
-     win_service:
-       name: ReprocesoAutorizacionesPendientesAudDEV
-     register: ReprocesoAutorizacionesPendientesAudDEV_service
-   - name: Stop ReprocesoAutorizacionesPendientesAudDEV
-     win_service:
-       name: ReprocesoAutorizacionesPendientesAudDEV
-       state: stopped
-     when: ReprocesoAutorizacionesPendientesAudDEV_service.exists
+# ### ReprocesoAutorizacionesPendientesAudDEV
+#    - name: get info on service ReprocesoAutorizacionesPendientesAudDEV
+#      win_service:
+#        name: ReprocesoAutorizacionesPendientesAudDEV
+#      register: ReprocesoAutorizacionesPendientesAudDEV_service
+#    - name: Stop ReprocesoAutorizacionesPendientesAudDEV
+#      win_service:
+#        name: ReprocesoAutorizacionesPendientesAudDEV
+#        state: stopped
+#      when: ReprocesoAutorizacionesPendientesAudDEV_service.exists
 
-### SanatorioAllendeBackEndDEV
-   - name: get info on service SanatorioAllendeBackEndENV
-     win_service:
-       name: SanatorioAllendeBackEndENV
-     register: SanatorioAllendeBackEndENV_service
-   - name: Stop SanatorioAllendeBackEndENV
-     win_service:
-       name: SanatorioAllendeBackEndENV
-       state: stopped
-     when: SanatorioAllendeBackEndENV_service.exists
+# ### SanatorioAllendeBackEndDEV
+#    - name: get info on service SanatorioAllendeBackEndENV
+#      win_service:
+#        name: SanatorioAllendeBackEndENV
+#      register: SanatorioAllendeBackEndENV_service
+#    - name: Stop SanatorioAllendeBackEndENV
+#      win_service:
+#        name: SanatorioAllendeBackEndENV
+#        state: stopped
+#      when: SanatorioAllendeBackEndENV_service.exists
 
-### SanatorioAllendeBackEnd.EFDEV
-   - name: get info on service SanatorioAllendeBackEnd.EFDEV
-     win_service:
-       name: SanatorioAllendeBackEnd.EFDEV
-     register: SanatorioAllendeBackEnd.EFDEV_service
-   - name: Stop SanatorioAllendeBackEnd.EFDEV
-     win_service:
-       name: SanatorioAllendeBackEnd.EFDEV
-       state: stopped
-     when: SanatorioAllendeBackEnd.EFDEV_service.exists
+# ### SanatorioAllendeBackEnd.EFDEV
+#    - name: get info on service SanatorioAllendeBackEnd.EFDEV
+#      win_service:
+#        name: SanatorioAllendeBackEnd.EFDEV
+#      register: SanatorioAllendeBackEnd.EFDEV_service
+#    - name: Stop SanatorioAllendeBackEnd.EFDEV
+#      win_service:
+#        name: SanatorioAllendeBackEnd.EFDEV
+#        state: stopped
+#      when: SanatorioAllendeBackEnd.EFDEV_service.exists
 
-### SanatorioAllendeBackEndPortalDEV
-   - name: get info on service SanatorioAllendeBackEndPortalDEV
-     win_service:
-       name: SanatorioAllendeBackEndPortalDEV
-     register: SanatorioAllendeBackEndPortalDEV_service
-   - name: Stop SanatorioAllendeBackEndPortalDEV
-     win_service:
-       name: SanatorioAllendeBackEndPortalDEV
-       state: stopped
-     when: SanatorioAllendeBackEndPortalDEV_service.exists
+# ### SanatorioAllendeBackEndPortalDEV
+#    - name: get info on service SanatorioAllendeBackEndPortalDEV
+#      win_service:
+#        name: SanatorioAllendeBackEndPortalDEV
+#      register: SanatorioAllendeBackEndPortalDEV_service
+#    - name: Stop SanatorioAllendeBackEndPortalDEV
+#      win_service:
+#        name: SanatorioAllendeBackEndPortalDEV
+#        state: stopped
+#      when: SanatorioAllendeBackEndPortalDEV_service.exists
 
-### ConfirmacionDeTurnosServiceDEV
-   - name: get info on service ConfirmacionDeTurnosServiceDEV
-     win_service:
-       name: ConfirmacionDeTurnosServiceDEV
-     register: ConfirmacionDeTurnosServiceDEV_service
-   - name: Stop ConfirmacionDeTurnosServiceDEV
-     win_service:
-       name: ConfirmacionDeTurnosServiceDEV
-       state: stopped
-     when: ConfirmacionDeTurnosServiceDEV_service.exists
+# ### ConfirmacionDeTurnosServiceDEV
+#    - name: get info on service ConfirmacionDeTurnosServiceDEV
+#      win_service:
+#        name: ConfirmacionDeTurnosServiceDEV
+#      register: ConfirmacionDeTurnosServiceDEV_service
+#    - name: Stop ConfirmacionDeTurnosServiceDEV
+#      win_service:
+#        name: ConfirmacionDeTurnosServiceDEV
+#        state: stopped
+#      when: ConfirmacionDeTurnosServiceDEV_service.exists
 
-### ConfirmacionDeTurnosServiceDEV
-   - name: get info on service ConfirmacionDeTurnosServiceDEV
-     win_service:
-       name: ConfirmacionDeTurnosServiceDEV
-     register: ConfirmacionDeTurnosServiceDEV_service
-   - name: Stop ConfirmacionDeTurnosServiceDEV
-     win_service:
-       name: ConfirmacionDeTurnosServiceDEV
-       state: stopped
-     when: ConfirmacionDeTurnosServiceDEV_service.exists
+# ### ConfirmacionDeTurnosServiceDEV
+#    - name: get info on service ConfirmacionDeTurnosServiceDEV
+#      win_service:
+#        name: ConfirmacionDeTurnosServiceDEV
+#      register: ConfirmacionDeTurnosServiceDEV_service
+#    - name: Stop ConfirmacionDeTurnosServiceDEV
+#      win_service:
+#        name: ConfirmacionDeTurnosServiceDEV
+#        state: stopped
+#      when: ConfirmacionDeTurnosServiceDEV_service.exists
 
-### ConfirmacionDeTurnosServiceIOCDEV
-   - name: get info on service ConfirmacionDeTurnosServiceIOCDEV
-     win_service:
-       name: ConfirmacionDeTurnosServiceIOCDEV
-     register: ConfirmacionDeTurnosServiceIOCDEV_service
-   - name: Stop ConfirmacionDeTurnosServiceIOCDEV
-     win_service:
-       name: ConfirmacionDeTurnosServiceIOCDEV
-       state: stopped
-     when: ConfirmacionDeTurnosServiceIOCDEV_service.exists
+# ### ConfirmacionDeTurnosServiceIOCDEV
+#    - name: get info on service ConfirmacionDeTurnosServiceIOCDEV
+#      win_service:
+#        name: ConfirmacionDeTurnosServiceIOCDEV
+#      register: ConfirmacionDeTurnosServiceIOCDEV_service
+#    - name: Stop ConfirmacionDeTurnosServiceIOCDEV
+#      win_service:
+#        name: ConfirmacionDeTurnosServiceIOCDEV
+#        state: stopped
+#      when: ConfirmacionDeTurnosServiceIOCDEV_service.exists
 
-### ConfirmacionDeTurnosServiceMETDEV
-   - name: get info on service ConfirmacionDeTurnosServiceMETDEV
-     win_service:
-       name: ConfirmacionDeTurnosServiceMETDEV
-     register: ConfirmacionDeTurnosServiceMETDEV_service
-   - name: Stop ConfirmacionDeTurnosServiceMETDEV
-     win_service:
-       name: ConfirmacionDeTurnosServiceMETDEV
-       state: stopped
-     when: ConfirmacionDeTurnosServiceMETDEV_service.exists
+# ### ConfirmacionDeTurnosServiceMETDEV
+#    - name: get info on service ConfirmacionDeTurnosServiceMETDEV
+#      win_service:
+#        name: ConfirmacionDeTurnosServiceMETDEV
+#      register: ConfirmacionDeTurnosServiceMETDEV_service
+#    - name: Stop ConfirmacionDeTurnosServiceMETDEV
+#      win_service:
+#        name: ConfirmacionDeTurnosServiceMETDEV
+#        state: stopped
+#      when: ConfirmacionDeTurnosServiceMETDEV_service.exists
 
-### MessageIntegrationServiceDEV
-   - name: get info on service MessageIntegrationServiceDEV
-     win_service:
-       name: MessageIntegrationServiceDEV
-     register: MessageIntegrationServiceDEV_service
-   - name: Stop MessageIntegrationServiceDEV
-     win_service:
-       name: MessageIntegrationServiceDEV
-       state: stopped
-     when: MessageIntegrationServiceDEV_service.exists
+# ### MessageIntegrationServiceDEV
+#    - name: get info on service MessageIntegrationServiceDEV
+#      win_service:
+#        name: MessageIntegrationServiceDEV
+#      register: MessageIntegrationServiceDEV_service
+#    - name: Stop MessageIntegrationServiceDEV
+#      win_service:
+#        name: MessageIntegrationServiceDEV
+#        state: stopped
+#      when: MessageIntegrationServiceDEV_service.exists
 
-### MessageIntegrationServiceIOCDEV
-   - name: get info on service MessageIntegrationServiceIOCDEV
-     win_service:
-       name: MessageIntegrationServiceIOCDEV
-     register: MessageIntegrationServiceIOCDEV_service
-   - name: Stop MessageIntegrationServiceIOCDEV
-     win_service:
-       name: MessageIntegrationServiceIOCDEV
-       state: stopped
-     when: MessageIntegrationServiceIOCDEV_service.exists
+# ### MessageIntegrationServiceIOCDEV
+#    - name: get info on service MessageIntegrationServiceIOCDEV
+#      win_service:
+#        name: MessageIntegrationServiceIOCDEV
+#      register: MessageIntegrationServiceIOCDEV_service
+#    - name: Stop MessageIntegrationServiceIOCDEV
+#      win_service:
+#        name: MessageIntegrationServiceIOCDEV
+#        state: stopped
+#      when: MessageIntegrationServiceIOCDEV_service.exists
 
-### MessageIntegrationServiceMETDEV
-   - name: get info on service MessageIntegrationServiceMETDEV
-     win_service:
-       name: MessageIntegrationServiceMETDEV
-     register: MessageIntegrationServiceMETDEV_service
-   - name: Stop MessageIntegrationServiceMETDEV
-     win_service:
-       name: MessageIntegrationServiceMETDEV
-       state: stopped
-     when: MessageIntegrationServiceMETDEV_service.exists
+# ### MessageIntegrationServiceMETDEV
+#    - name: get info on service MessageIntegrationServiceMETDEV
+#      win_service:
+#        name: MessageIntegrationServiceMETDEV
+#      register: MessageIntegrationServiceMETDEV_service
+#    - name: Stop MessageIntegrationServiceMETDEV
+#      win_service:
+#        name: MessageIntegrationServiceMETDEV
+#        state: stopped
+#      when: MessageIntegrationServiceMETDEV_service.exists
 
-### FacturaElectronicaServiceDEV
-   - name: get info on service FacturaElectronicaServiceDEV
-     win_service:
-       name: FacturaElectronicaServiceDEV
-     register: FacturaElectronicaServiceDEV_service
-   - name: Stop FacturaElectronicaServiceDEV
-     win_service:
-       name: FacturaElectronicaServiceDEV
-       state: stopped
-     when: FacturaElectronicaServiceDEV_service.exists
+# ### FacturaElectronicaServiceDEV
+#    - name: get info on service FacturaElectronicaServiceDEV
+#      win_service:
+#        name: FacturaElectronicaServiceDEV
+#      register: FacturaElectronicaServiceDEV_service
+#    - name: Stop FacturaElectronicaServiceDEV
+#      win_service:
+#        name: FacturaElectronicaServiceDEV
+#        state: stopped
+#      when: FacturaElectronicaServiceDEV_service.exists
 
-### ImportadorDeFarmacosServiceDEV
-   - name: get info on service ImportadorDeFarmacosServiceDEV
-     win_service:
-       name: ImportadorDeFarmacosServiceDEV
-     register: ImportadorDeFarmacosServiceDEV_service
-   - name: Stop ImportadorDeFarmacosServiceDEV
-     win_service:
-       name: ImportadorDeFarmacosServiceDEV
-       state: stopped
-     when: ImportadorDeFarmacosServiceDEV_service.exists
+# ### ImportadorDeFarmacosServiceDEV
+#    - name: get info on service ImportadorDeFarmacosServiceDEV
+#      win_service:
+#        name: ImportadorDeFarmacosServiceDEV
+#      register: ImportadorDeFarmacosServiceDEV_service
+#    - name: Stop ImportadorDeFarmacosServiceDEV
+#      win_service:
+#        name: ImportadorDeFarmacosServiceDEV
+#        state: stopped
+#      when: ImportadorDeFarmacosServiceDEV_service.exists
 
-### RisIntegrationServiceDEV
-   - name: get info on service RisIntegrationServiceDEV
-     win_service:
-       name: RisIntegrationServiceDEV
-     register: RisIntegrationServiceDEV_service
-   - name: Stop RisIntegrationServiceDEV
-     win_service:
-       name: RisIntegrationServiceDEV
-       state: stopped
-     when: RisIntegrationServiceDEV_service.exists
+# ### RisIntegrationServiceDEV
+#    - name: get info on service RisIntegrationServiceDEV
+#      win_service:
+#        name: RisIntegrationServiceDEV
+#      register: RisIntegrationServiceDEV_service
+#    - name: Stop RisIntegrationServiceDEV
+#      win_service:
+#        name: RisIntegrationServiceDEV
+#        state: stopped
+#      when: RisIntegrationServiceDEV_service.exists
 
-### SA-Reprocesador
-   - name: get info on service SA-Reprocesador
-     win_service:
-       name: SA-Reprocesador
-     register: SA-Reprocesador_service
-   - name: Stop SA-Reprocesador
-     win_service:
-       name: ReprocesadorDeIntegraciSA-ReprocesadoronesDEV
-       state: stopped
-     when: RSA-Reprocesador_service.exists
+# ### SA-Reprocesador
+#    - name: get info on service SA-Reprocesador
+#      win_service:
+#        name: SA-Reprocesador
+#      register: SA-Reprocesador_service
+#    - name: Stop SA-Reprocesador
+#      win_service:
+#        name: ReprocesadorDeIntegraciSA-ReprocesadoronesDEV
+#        state: stopped
+#      when: RSA-Reprocesador_service.exists
 
-### TerminologiaDEV
-   - name: get info on service TerminologiaDEV
-     win_service:
-       name: TerminologiaDEV
-     register: TerminologiaDEV_service
-   - name: Stop TerminologiaDEV
-     win_service:
-       name: TerminologiaDEV
-       state: stopped
-     when: TerminologiaDEV_service.exists
+# ### TerminologiaDEV
+#    - name: get info on service TerminologiaDEV
+#      win_service:
+#        name: TerminologiaDEV
+#      register: TerminologiaDEV_service
+#    - name: Stop TerminologiaDEV
+#      win_service:
+#        name: TerminologiaDEV
+#        state: stopped
+#      when: TerminologiaDEV_service.exists
 
 
 ########################################################################## Manejo Archivos
@@ -283,95 +283,18 @@
 ### Elimino Carpetas de Servicios
    - name: Elimino Carpeta DEV
      win_file:
-       path: C:\ServiciosSA\DEV\
+       path: "{{ dirDeploy }}"
        state: absent
 
 ### Creo Carpeta de Servicios
    - name: Creo Carpeta DEV
      win_file:
-       path: C:\ServiciosSA\DEV\
+       path: "{{ dirDeploy }}"
        state: directory
-
-
 
 ### Copio Carpetas de nuevo Deploy
 
-   - name: Copy ApiGatewayPortal
+   - name: Copy Carpetas Deploy
      win_copy:
-       src: '{{ workSpace }}ApiGatewayPortal'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy ApiGateway
-     win_copy:
-       src: '{{ workSpace }}ApiGateway'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy Authentication
-     win_copy:
-       src: '{{ workSpace }}Authentication'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy BackEnd
-     win_copy:
-       src: '{{ workSpace }}BackEnd'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy BackupIM
-     win_copy:
-       src: '{{ workSpace }}BackupIM'
-       dest: "{{ dirDeploy }}"
-  
-   - name: Copy CacheTerminologia
-     win_copy:
-       src: '{{ workSpace }}CacheTerminologia'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy ConfirmacionDeTurnos
-     win_copy:
-       src: '{{ workSpace }}ConfirmacionDeTurnos'
-       dest: "{{ dirDeploy }}"
-  
-   - name: Copy FacturacionElectronica
-     win_copy:
-       src: '{{ workSpace }}FacturacionElectronica'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy ImportadorDeFarmacos
-     win_copy:
-       src: '{{ workSpace }}ImportadorDeFarmacos'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy MessageIntegration
-     win_copy:
-       src: '{{ workSpace }}Integraciones'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy NotificacionDeSolicitudesPendientes
-     win_copy:
-       src: '{{ workSpace }}NotificacionDeSolicitudesPendientes'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy BackEndPortal
-     win_copy:
-       src: '{{ workSpace }}BackEndPortal'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy ReprocesadorDeIntegraciones
-     win_copy:
-       src: '{{ workSpace }}ReprocesadorDeIntegraciones'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy ReprocesoAutorizacionesPendientesAud
-     win_copy:
-       src: '{{ workSpace }}ReprocesoAutorizacionesPendientesAud'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy RisIntegrationService
-     win_copy:
-       src: '{{ workSpace }}RisIntegrationService'
-       dest: "{{ dirDeploy }}"
-
-   - name: Copy Terminologia
-     win_copy:
-       src: '{{ workSpace }}Terminologia'
+       src: "{{ workSpace }}"
        dest: "{{ dirDeploy }}"
