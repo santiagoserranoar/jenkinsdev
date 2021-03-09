@@ -294,7 +294,8 @@
 
 ### Copio Carpetas de nuevo Deploy
 
-   - name: Copy Carpetas Deploy
+
+   - name: Copy folder contents recursively
      win_copy:
-       src: "{{ workSpace }}"
-       dest: "{{ dirDeploy }}"
+       src: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/ApiGateway
+       dest: C:\ServiciosInfra\DEV\
