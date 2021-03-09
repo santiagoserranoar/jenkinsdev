@@ -294,8 +294,7 @@
 
 ### Copio Carpetas de nuevo Deploy
 
-
    - name: Copy folder contents recursively
      win_copy:
        src: "{{ workSpace }}"
-       dest: "{{ dirDeploy }}"
+       dest: "{{ dirDeploy }}" 
