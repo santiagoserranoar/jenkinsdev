@@ -296,5 +296,5 @@
 
    - name: Copy folder contents recursively
      win_copy:
-       src: "{{ workSpace }}"
+       src: "{{ workSpace  }}ApiGateway"
        dest: "{{ dirDeploy }}" 
