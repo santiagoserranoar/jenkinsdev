@@ -297,5 +297,5 @@
 
    - name: Copy folder contents recursively
      win_copy:
-       src: /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/ApiGateway
-       dest: C:\ServiciosInfra\DEV\
+       src: "{{ workSpace }}"
+       dest: "{{ dirDeploy }}"
