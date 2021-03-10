@@ -293,8 +293,12 @@
        state: directory
 
 ### Copio Carpetas de nuevo Deploy
-
-   - name: Copy folder contents recursively
+   - name: Copy a single file keeping the filename
      win_copy:
-       src: "{{ workSpace  }}ApiGateway"
-       dest: "{{ dirDeploy }}" 
+       src: "{{ workSpace }}"
+       dest: "{{ dirDeploy }}"
+#   - name: Copy folder contents recursively
+#     win_copy:
+#       src: "{{ item }}"
+#       dest: "{{ dirDeploy }}"
+#     with_items: "{{ workSpace }}"
