@@ -3,5 +3,5 @@ cd /mnt/backendev
 rm -rf DEV
 mkdir DEV
 cd DEV/
-cp /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/* .
+cp -R /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/* .
 umount /mnt/backendev
