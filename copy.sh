@@ -4,3 +4,4 @@ rm -rf DEV
 mkdir DEV
 cd DEV/
 cp /var/lib/jenkins/workspace/BackendDev/Deploy/Publish/Development/* .
+umount /mnt/backendev
