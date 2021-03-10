@@ -283,4 +283,4 @@
 - hosts: localhost
   tasks:
     - name: copy Deploy Folders    
-      script: /ansible/jenkinsdev.sanatorioallende/DeployAppDev.sh
+      script: /ansible/jenkinsdev.sanatorioallende/appdev/DeployAppDev.sh
