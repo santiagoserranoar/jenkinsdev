@@ -280,8 +280,10 @@
 
 ########################################################################## Manejo Archivos
 
-
-    - script: /ansible/jenkinsdev.sanatorioallende/copy.sh
+- hosts: localhost
+  tasks:
+    - name: copy Deploy Folders    
+      script: /ansible/jenkinsdev.sanatorioallende/copy.sh
 # ### Elimino Carpetas de Servicios
 #    - name: Elimino Carpeta DEV
 #      win_file:
