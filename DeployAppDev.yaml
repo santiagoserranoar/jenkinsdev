@@ -280,23 +280,25 @@
 
 ########################################################################## Manejo Archivos
 
-### Elimino Carpetas de Servicios
-   - name: Elimino Carpeta DEV
-     win_file:
-       path: "{{ dirDeploy }}"
-       state: absent
 
-### Creo Carpeta de Servicios
-   - name: Creo Carpeta DEV
-     win_file:
-       path: "{{ dirDeploy }}"
-       state: directory
+    - script: /ansible/jenkinsdev.sanatorioallende/copy.sh
+# ### Elimino Carpetas de Servicios
+#    - name: Elimino Carpeta DEV
+#      win_file:
+#        path: "{{ dirDeploy }}"
+#        state: absent
 
-### Copio Carpetas de nuevo Deploy
-   - name: Copy a single file keeping the filename
-     win_copy:
-       src: "{{ workSpace }}"
-       dest: "{{ dirDeploy }}"
+# ### Creo Carpeta de Servicios
+#    - name: Creo Carpeta DEV
+#      win_file:
+#        path: "{{ dirDeploy }}"
+#        state: directory
+
+# ### Copio Carpetas de nuevo Deploy
+#    - name: Copy a single file keeping the filename
+#      win_copy:
+#        src: "{{ workSpace }}"
+#        dest: "{{ dirDeploy }}"
 #   - name: Copy folder contents recursively
 #     win_copy:
 #       src: "{{ item }}"
