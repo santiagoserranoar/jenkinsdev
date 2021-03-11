@@ -113,15 +113,15 @@
      when: ReprocesoAutorizacionesPendientesAudDEV_service.exists
 
 ### SanatorioAllendeBackEndDEV
-   - name: get info on service SanatorioAllendeBackEndENV
+   - name: get info on service SanatorioAllendeBackEndDEV
      win_service:
-       name: SanatorioAllendeBackEndENV
-     register: SanatorioAllendeBackEndENV_service
-   - name: Stop SanatorioAllendeBackEndENV
+       name: SanatorioAllendeBackEndDEV
+     register: SanatorioAllendeBackEndDEV_service
+   - name: Stop SanatorioAllendeBackEndDEV
      win_service:
-       name: SanatorioAllendeBackEndENV
+       name: SanatorioAllendeBackEndDEV
        state: stopped
-     when: SanatorioAllendeBackEndENV_service.exists
+     when: SanatorioAllendeBackEndDEV_service.exists
 
 ### SanatorioAllendeBackEnd.EFDEV
    - name: get info on service SanatorioAllendeBackEnd.EFDEV
