@@ -259,12 +259,12 @@
    - name: get info on service SA-Reprocesador
      win_service:
        name: SA-Reprocesador
-     register: SAReprocesador_service
+     register: Reprocesador_service
    - name: Stop SA-Reprocesador
      win_service:
-       name: ReprocesadorDeIntegraciSA-ReprocesadoronesDEV
+       name: SA-Reprocesador
        state: stopped
-     when: RSAReprocesador_service.exists
+     when: Reprocesador_service.exists
 
 ### TerminologiaDEV
    - name: get info on service TerminologiaDEV
