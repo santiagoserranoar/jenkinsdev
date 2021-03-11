@@ -127,12 +127,12 @@
    - name: get info on service SanatorioAllendeBackEnd.EFDEV
      win_service:
        name: SanatorioAllendeBackEnd.EFDEV
-     register: SanatorioAllendeBackEnd.EFDEV_service
+     register: SanatorioAllendeBackEndEFDEV_service
    - name: Stop SanatorioAllendeBackEnd.EFDEV
      win_service:
        name: SanatorioAllendeBackEnd.EFDEV
        state: stopped
-     when: SanatorioAllendeBackEnd.EFDEV_service.exists
+     when: SanatorioAllendeBackEndEFDEV_service.exists
 
 ### SanatorioAllendeBackEndPortalDEV
    - name: get info on service SanatorioAllendeBackEndPortalDEV
